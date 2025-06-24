@@ -1,5 +1,12 @@
 import json
+from math import ceil
 import requests
+
+TYPES = {
+    "GET": lambda url,headers,data,timeout : requests.get(url=url,headers=headers,data=data,timeout=timeout),
+    "POST": lambda url,headers,data,timeout : requests.post(url=url,headers=headers,data=data,timeout=timeout),
+    "PUT": lambda url,headers,data,timeout : requests.put(url=url,headers=headers,data=data,timeout=timeout)
+}
 
 def get_secrets():
     with open("secrets.json") as f:
@@ -14,3 +21,21 @@ def get_new_token(secrets):
     # Write new key to file
     with open("secrets.json", "w") as f:
         json.dump(secrets, f)
+    return secrets
+
+def request(type, secrets, url, headers={}, data=None, timeout=1000):
+    failure = True
+    if type not in TYPES:
+        raise ValueError("invalid request type.")
+    while failure:
+        headers["Authorization"] = "Bearer "+ secrets['key']
+        response = TYPES[type](url, headers, data, timeout)
+        json_response = json.loads(response.content)
+        if 'error' in json_response.keys():
+            if json_response['error']['message'] == 'The access token expired':
+                secrets = get_new_token(secrets)
+            else:
+                raise ConnectionAbortedError(json_response)
+        else:
+            failure = False
+    return json_response
