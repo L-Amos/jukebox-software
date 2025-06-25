@@ -7,8 +7,8 @@ TYPES = {
     "PUT": lambda url,headers,data,timeout : requests.put(url=url,headers=headers,data=data,timeout=timeout)
 }
 
-def get_secrets():
-    with open("secrets.json") as f:
+def get_secrets(filepath="secrets.json"):
+    with open(filepath) as f:
         secrets = json.loads(f.read())
     if "key" not in secrets.keys():
         raise KeyError("secrets file does not have an access token.")
