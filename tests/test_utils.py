@@ -52,4 +52,6 @@ def test_request():
         new_secrets = json.loads(f.read())
     assert fake_secrets["key"] != new_secrets["key"]
     # Checking type error
+    with pytest.raises(ValueError, match="invalid request type."):
+        assert utils.request("NOT_GET", "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg", secrets_file=".pyc")
 
