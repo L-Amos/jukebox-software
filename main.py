@@ -3,10 +3,10 @@ from utils import request
 PLAYLIST_ID = "5XrU6HqhgFevHvrDE0BQT9"
 NUM_PAGES = 10
 class Song:
-    def __init__(self, title, artist, url):
+    def __init__(self, title, artist, uri):
         self.title = title
         self.artist = artist
-        self.url = url
+        self.uri = uri
 
 class Page:
     def __init__(self, playlist_id, page_num):
@@ -29,13 +29,13 @@ def get_tracks(playlist_id, offset):
     for item in items:
         name = item["track"]["name"]
         artist = item["track"]["artists"][0]["name"]
-        url = item["track"]["uri"]
-        tracklist.append(Song(name, artist, url))
+        uri = item["track"]["uri"]
+        tracklist.append(Song(name, artist, uri))
     return tracklist
 
-def play_song(song_url, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
+def play_song(song_uri, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
     headers = {"Content-Type": "application/json"}
-    data = f'{{"uris": ["{song_url}"],"position_ms": 0}}'
+    data = f'{{"uris": ["{song_uri}"],"position_ms": 0}}'
     url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
     request("PUT", url, headers=headers, data=data)
 
