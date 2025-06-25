@@ -7,7 +7,7 @@ TYPES = {
     "PUT": lambda url,headers,data,timeout : requests.put(url=url,headers=headers,data=data,timeout=timeout)
 }
 
-def get_secrets(filepath="secrets.json"):
+def get_secrets(filepath):
     with open(filepath) as f:
         secrets = json.loads(f.read())
     if "key" not in secrets.keys():
@@ -30,7 +30,8 @@ def get_new_token(secrets):
         json.dump(secrets, f)
     return secrets
 
-def request(type, secrets, url, headers={}, data=None, timeout=1000):
+def request(type,url, secrets_file="secrets.json", headers={}, data=None, timeout=1000):
+    secrets = get_secrets(secrets_file)
     failure = True
     if type not in TYPES:
         raise ValueError("invalid request type.")
