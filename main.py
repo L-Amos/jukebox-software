@@ -20,8 +20,6 @@ class Page:
 
 def get_tracks(playlist_id, offset):
     tracklist = []
-    # Get initial response to work out how many songs there are in the playlist
-    response = request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=1")
     response =request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=20&offset={offset}")
     items = response["items"]
     for item in items:
