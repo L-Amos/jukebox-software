@@ -43,6 +43,7 @@ def main():
     pages = [Page(PLAYLIST_ID, i) for i in range(NUM_PAGES)]
     active_page = 0
     while True:
+        pages[active_page].refresh()
         pages[active_page].display()
         user_input = input("\nPick A Song\n'<' To Go Back\n'>' To Go Forwards\n")
         if user_input=="q":
