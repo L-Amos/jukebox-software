@@ -1,7 +1,8 @@
+from math import ceil
 from utils import request
 
-PLAYLIST_ID = "5XrU6HqhgFevHvrDE0BQT9"
-NUM_PAGES = 10
+PLAYLIST_ID = "0bluwA0qhGV7ylBKELLFWm"
+SONGS_PER_PAGE = 22
 class Song:
     def __init__(self, title, artist, uri):
         self.title = title
@@ -12,7 +13,7 @@ class Page:
     def __init__(self, playlist_id, page_num):
         self.playlist_id = playlist_id
         self.page_num = page_num
-        self.tracks = get_tracks(playlist_id, (page_num)*20)
+        self.tracks = get_tracks(playlist_id, (page_num)*SONGS_PER_PAGE)
 
     def display(self):
         print(f"PAGE {self.page_num+1}\n" + "="*len(f"PAGE {self.page_num+1}"))
@@ -20,11 +21,11 @@ class Page:
             print(f"{i+1:02}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
 
     def refresh(self):
-        self.tracks = get_tracks(self.playlist_id, (self.page_num)*20)
+        self.tracks = get_tracks(self.playlist_id, (self.page_num)*SONGS_PER_PAGE)
 
 def get_tracks(playlist_id, offset):
     tracklist = []
-    response =request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=20&offset={offset}")
+    response = request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={offset}")
     items = response["items"]
     for item in items:
         name = item["track"]["name"]
@@ -40,7 +41,9 @@ def play_song(song_uri, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1")
     request("PUT", url, headers=headers, data=data)
 
 def main():
-    pages = [Page(PLAYLIST_ID, i) for i in range(NUM_PAGES)]
+    num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
+    num_pages = ceil(num_songs/SONGS_PER_PAGE)
+    pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
     active_page = 0
     while True:
         pages[active_page].refresh()
@@ -51,10 +54,10 @@ def main():
         elif user_input == "<":
             active_page -=1
             if active_page<0:
-                active_page = NUM_PAGES-1
+                active_page = num_pages-1
         elif user_input==">":
             active_page += 1
-            if active_page > NUM_PAGES-1:
+            if active_page > num_pages-1:
                 active_page = 0
         else:
             try:
