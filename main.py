@@ -54,7 +54,7 @@ def main():
                 active_page = NUM_PAGES-1
         elif user_input==">":
             active_page += 1
-            if active_page > 9:
+            if active_page > NUM_PAGES-1:
                 active_page = 0
         else:
             try:
