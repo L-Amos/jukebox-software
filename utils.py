@@ -31,10 +31,10 @@ def get_new_token(secrets, filepath):
     return secrets
 
 def request(type,url, secrets_file="secrets.json", headers={}, data=None, timeout=1000):
-    secrets = get_secrets(secrets_file)
-    failure = True
     if type not in TYPES:
         raise ValueError("invalid request type.")
+    secrets = get_secrets(secrets_file)
+    failure = True
     while failure:
         headers["Authorization"] = "Bearer "+ secrets['key']
         response = TYPES[type](url, headers, data, timeout)
