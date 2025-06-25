@@ -1,6 +1,12 @@
 from math import ceil
 from utils import request
 
+class Song:
+    def __init__(self, title, artist, url):
+        self.title = title
+        self.artist = artist
+        self.url = url
+
 def get_tracklist(playlist_id):
     tracklist = []
     # Get initial response to work out how many songs there are in the playlist
