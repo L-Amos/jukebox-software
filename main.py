@@ -7,6 +7,16 @@ class Song:
         self.artist = artist
         self.url = url
 
+class Page:
+    def __init__(self, playlist_id, page_num):
+        self.page_num = page_num
+        self.tracks = get_tracks(playlist_id, (page_num-1)*20)
+
+    def display(self):
+        print(f"PAGE {self.page_num}\n" + "="*len(f"PAGE {self.page_num}"))
+        for i in range(0, len(self.tracks)):
+            print(f"{i+1}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
+
 def get_tracks(playlist_id, offset):
     tracklist = []
     # Get initial response to work out how many songs there are in the playlist
@@ -25,11 +35,4 @@ def play_song(song_url, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1")
     data = f'{{"uris": ["{song_url}"],"position_ms": 0}}'
     url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
     request("PUT", url, headers=headers, data=data)
-
-
-def main():
-    tracklist = get_tracklist("5XrU6HqhgFevHvrDE0BQT9")
-    play_song(tracklist[-1].url)
-
-main()
 
