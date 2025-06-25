@@ -62,7 +62,7 @@ def main():
             except ValueError:
                 print("\nERROR: ENTER A VALID SONG NUMBER.")
             else:
-                if song_selection >= len(pages[active_page].tracks) or song_selection <= 0:
+                if song_selection > len(pages[active_page].tracks) or song_selection <= 0:
                     print("\nERROR: ENTER A VALID SONG NUMBER.")
                 else:
                     play_song(pages[active_page].tracks[song_selection-1].uri)
