@@ -21,3 +21,10 @@ def get_tracklist(playlist_id):
             url = item["track"]["uri"]
             tracklist.append(Song(name, artist, url))
     return tracklist
+
+def play_song(song_url, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
+    headers = {"Content-Type": "application/json"}
+    data = f'{{"uris": ["{song_url}"],"position_ms": 0}}'
+    url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
+    request("PUT", url, headers=headers, data=data)
+
