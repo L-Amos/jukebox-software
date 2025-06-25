@@ -30,14 +30,14 @@ def get_new_token(secrets, filepath):
         json.dump(secrets, f)
     return secrets
 
-def request(type,url, secrets_file="secrets.json", headers={}, data=None, timeout=1000):
-    if type not in TYPES:
+def request(request_type, url, secrets_file="secrets.json", headers={}, data=None, timeout=1000):
+    if request_type not in TYPES:
         raise ValueError("invalid request type.")
     secrets = get_secrets(secrets_file)
     failure = True
     while failure:
         headers["Authorization"] = "Bearer "+ secrets['key']
-        response = TYPES[type](url, headers, data, timeout)
+        response = TYPES[request_type](url, headers, data, timeout)
         json_response = json.loads(response.content)
         if 'error' in json_response.keys():
             if json_response['error']['message'] == 'The access token expired':
