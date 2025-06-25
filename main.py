@@ -17,7 +17,7 @@ class Page:
     def display(self):
         print(f"PAGE {self.page_num+1}\n" + "="*len(f"PAGE {self.page_num+1}"))
         for i in range(0, len(self.tracks)):
-            print(f"{i+1}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
+            print(f"{i+1:02}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
 
     def refresh(self):
         self.tracks = get_tracks(self.playlist_id, (self.page_num)*20)
