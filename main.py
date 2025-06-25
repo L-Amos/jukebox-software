@@ -39,5 +39,21 @@ def play_song(song_url, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1")
     url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
     request("PUT", url, headers=headers, data=data)
 
-pages = [Page(PLAYLIST_ID, i) for i in range(NUM_PAGES)]
-pages[0].display()
+def main():
+    pages = [Page(PLAYLIST_ID, i) for i in range(NUM_PAGES)]
+    active_page = 0
+    while True:
+        pages[active_page].display()
+        user_input = input("\nPick A Song\n'<' To Go Back\n'>' To Go Forwards\n")
+        if user_input=="q":
+            break
+        elif user_input == "<":
+            active_page -=1
+            if active_page<0:
+                active_page = NUM_PAGES-1
+        elif user_input==">":
+            active_page += 1
+            if active_page > 9:
+                active_page = 0
+
+main()
