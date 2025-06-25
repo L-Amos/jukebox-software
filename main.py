@@ -1,6 +1,7 @@
-from math import ceil
 from utils import request
 
+PLAYLIST_ID = "5XrU6HqhgFevHvrDE0BQT9"
+NUM_PAGES = 10
 class Song:
     def __init__(self, title, artist, url):
         self.title = title
