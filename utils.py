@@ -10,6 +10,14 @@ TYPES = {
 def get_secrets():
     with open("secrets.json") as f:
         secrets = json.loads(f.read())
+    if "key" not in secrets.keys():
+        raise KeyError("secrets file does not have an access token.")
+    elif "id" not in secrets.keys():
+        raise KeyError("secrets file does not have a client id.")
+    elif "client_secret" not in secrets.keys():
+        raise KeyError("secrets file does not have a client secret.")
+    elif "refresh_token" not in secrets.keys():
+         raise KeyError("secrets file does not have a refresh token.")
     return secrets
 
 def get_new_token(secrets):
