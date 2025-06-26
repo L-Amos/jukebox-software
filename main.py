@@ -2,12 +2,18 @@ from math import ceil
 from utils import request
 
 PLAYLIST_ID = "0bluwA0qhGV7ylBKELLFWm"
-SONGS_PER_PAGE = 22
+SONGS_PER_PAGE = 24
 class Song:
     def __init__(self, title, artist, uri):
         self.title = title
         self.artist = artist
         self.uri = uri
+    
+    def play(self, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
+        headers = {"Content-Type": "application/json"}
+        data = f'{{"uris": ["{self.uri}"],"position_ms": 0}}'
+        url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
+        request("PUT", url, headers=headers, data=data)
 
 class Page:
     def __init__(self, playlist_id, page_num):
@@ -40,7 +46,7 @@ def play_song(song_uri, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1")
     url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
     request("PUT", url, headers=headers, data=data)
 
-def main():
+if __name__ == "__main__":
     num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
     num_pages = ceil(num_songs/SONGS_PER_PAGE)
     pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
@@ -69,5 +75,3 @@ def main():
                     print("\nERROR: ENTER A VALID SONG NUMBER.")
                 else:
                     play_song(pages[active_page].tracks[song_selection-1].uri)
-
-main()
