@@ -37,7 +37,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../Frontage_Template.png</pixmap>
+     <pixmap>resources/frontage-template.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -48,14 +48,14 @@
      <rect>
       <x>170</x>
       <y>130</y>
-      <width>161</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -73,8 +73,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -92,8 +92,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -111,8 +111,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -130,8 +130,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -149,8 +149,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -162,14 +162,14 @@
      <rect>
       <x>348</x>
       <y>134</y>
-      <width>161</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -187,8 +187,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -206,8 +206,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -225,8 +225,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -244,8 +244,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -255,16 +255,16 @@
    <widget class="QLabel" name="song11">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>350</x>
       <y>360</y>
-      <width>111</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -274,16 +274,16 @@
    <widget class="QLabel" name="song13">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>190</y>
-      <width>131</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -293,16 +293,16 @@
    <widget class="QLabel" name="song14">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>230</y>
-      <width>131</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -320,8 +320,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -339,8 +339,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -358,8 +358,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -377,8 +377,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -396,8 +396,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -415,8 +415,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -434,8 +434,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -453,8 +453,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -472,8 +472,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
@@ -491,8 +491,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Love Craft</family>
-      <pointsize>7</pointsize>
+      <family>High Tower Text</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
