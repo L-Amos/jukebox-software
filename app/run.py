@@ -27,6 +27,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Connect buttons
         for button in self.button_list:
             button.clicked.connect(partial(self.button_click, button))
+        self.playing = False
     
     def page_load(self):
         self.text_reset()
@@ -53,10 +54,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.chosen_num += button.text()
             if len(self.chosen_num)==2:
                 chosen_track = int(self.chosen_num)
-                if chosen_track > len(self.pages[self.active_page].tracks) or chosen_track < 1:
+                if chosen_track > len(self.pages[self.active_page].tracks) or chosen_track < 0:
+                    self.button_reset()
+                elif chosen_track==0:
+                    if self.playing:
+                        request("PUT", "https://api.spotify.com/v1/me/player/pause")
+                        self.playing = False
+                    else:
+                        request("PUT", "https://api.spotify.com/v1/me/player/play")
+                        self.playing = True
                     self.button_reset()
                 else:
                     self.pages[self.active_page].tracks[chosen_track-1].play()
+                    self.playing = True
                     self.button_reset()
         else:
             if "forward" in button.objectName():
