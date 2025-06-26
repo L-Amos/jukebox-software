@@ -46,17 +46,20 @@
    <widget class="QLabel" name="song0">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>130</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -65,17 +68,20 @@
    <widget class="QLabel" name="song1">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>175</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -84,17 +90,20 @@
    <widget class="QLabel" name="song2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>220</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -103,17 +112,20 @@
    <widget class="QLabel" name="song3">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>266</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -122,17 +134,20 @@
    <widget class="QLabel" name="song4">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>310</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -141,17 +156,20 @@
    <widget class="QLabel" name="song5">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>357</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -160,17 +178,20 @@
    <widget class="QLabel" name="song6">
     <property name="geometry">
      <rect>
-      <x>348</x>
+      <x>338</x>
       <y>134</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -179,17 +200,20 @@
    <widget class="QLabel" name="song7">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>180</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -198,17 +222,20 @@
    <widget class="QLabel" name="song8">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>225</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -217,17 +244,20 @@
    <widget class="QLabel" name="song9">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>270</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -236,17 +266,20 @@
    <widget class="QLabel" name="song10">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>312</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -255,17 +288,20 @@
    <widget class="QLabel" name="song11">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>340</x>
       <y>360</y>
-      <width>151</width>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -274,17 +310,20 @@
    <widget class="QLabel" name="song13">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>710</x>
       <y>190</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -293,17 +332,20 @@
    <widget class="QLabel" name="song14">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>710</x>
       <y>230</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -312,17 +354,20 @@
    <widget class="QLabel" name="song23">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>880</x>
       <y>360</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -331,17 +376,20 @@
    <widget class="QLabel" name="song16">
     <property name="geometry">
      <rect>
-      <x>722</x>
+      <x>712</x>
       <y>316</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -350,17 +398,20 @@
    <widget class="QLabel" name="song20">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>880</x>
       <y>233</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -369,17 +420,20 @@
    <widget class="QLabel" name="song19">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>880</x>
       <y>189</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -388,17 +442,20 @@
    <widget class="QLabel" name="song12">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>710</x>
       <y>143</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -407,17 +464,20 @@
    <widget class="QLabel" name="song21">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>880</x>
       <y>274</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -426,17 +486,20 @@
    <widget class="QLabel" name="song22">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>880</x>
       <y>317</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -445,17 +508,20 @@
    <widget class="QLabel" name="song15">
     <property name="geometry">
      <rect>
-      <x>722</x>
+      <x>712</x>
       <y>274</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -464,17 +530,20 @@
    <widget class="QLabel" name="song17">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>710</x>
       <y>360</y>
-      <width>141</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
@@ -483,17 +552,20 @@
    <widget class="QLabel" name="song18">
     <property name="geometry">
      <rect>
-      <x>888</x>
+      <x>878</x>
       <y>146</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>High Tower Text</family>
-      <pointsize>12</pointsize>
+      <family>Arcane Nine</family>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:yellow</string>
     </property>
     <property name="text">
      <string>Song Name</string>
