@@ -20,7 +20,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
         self.active_page = 0
         self.pages[self.active_page].refresh()
-        self.pages[self.active_page].display()
         self.chosen_num = ""
         self.button_list = self.buttons.findChildren(QtWidgets.QPushButton)
         self.song_labels = self.findChildren(QtWidgets.QLabel, QtCore.QRegularExpression("^song"))
