@@ -30,7 +30,7 @@ def get_new_token(secrets, filepath):
         json.dump(secrets, f)
     return secrets
 
-def request(request_type, url, secrets_file="src/secrets.json", headers={}, data=None, timeout=1000):
+def request(request_type, url, secrets_file="../src/secrets.json", headers={}, data=None, timeout=1000):
     if request_type not in TYPES:
         raise ValueError("invalid request type.")
     secrets = get_secrets(secrets_file)
