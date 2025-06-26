@@ -1,4 +1,5 @@
 import sys
+sys.path.append("../")
 from PySide6 import QtWidgets, QtCore
 
 from app.app_ui import Ui_MainWindow
