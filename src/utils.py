@@ -38,9 +38,10 @@ def request(request_type, url, secrets_file="../src/secrets.json", headers={}, d
     while failure:
         headers["Authorization"] = "Bearer "+ secrets['key']
         response = TYPES[request_type](url, headers, data, timeout)
-        if not response.content:
+        try:
+            json_response = json.loads(response.content)
+        except json.decoder.JSONDecodeError:
             return ''
-        json_response = json.loads(response.content)
         if 'error' in json_response.keys():
             if json_response['error']['message'] == 'The access token expired':
                 secrets = get_new_token(secrets, secrets_file)
