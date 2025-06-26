@@ -1,5 +1,8 @@
 from math import ceil
-from utils import request
+if __name__=="__main__":
+    from utils import request
+else:
+    from src.utils import request
 
 PLAYLIST_ID = "0bluwA0qhGV7ylBKELLFWm"
 SONGS_PER_PAGE = 24
