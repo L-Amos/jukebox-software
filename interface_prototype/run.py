@@ -1,54 +1,71 @@
-import sys
-sys.path.append("../")
-from PySide6 import QtWidgets, QtCore
+"""Prototype for jukebox interface.
 
-from interface_prototype.app_ui import Ui_MainWindow
-from functools import partial
-
+Displays a rough interface in a picture of the jukebox frontage. Includes clickable buttons and scrolling
+song names.
+"""
 from math import ceil
-
+from functools import partial
+import sys
+from PySide6 import QtWidgets, QtCore
+from interface_prototype.app_ui import Ui_MainWindow
 from src.jukebox import Page
 from src.utils import request, PLAYLIST_ID, SONGS_PER_PAGE
 
+sys.path.append("../")  # Allows for imports
+
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+    """Main GUI window.
+    """
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
-        # Get Page
+        self.setupUi(self)  # Creates ui based on app_ui.py
+        self.chosen_num = ""
+        self.button_list = self.buttons.findChildren(QtWidgets.QPushButton)
+        self.song_labels = self.findChildren(QtWidgets.QLabel, QtCore.QRegularExpression("^song"))
+        self.timers = []
+        self.playing = False
+        # Create Pages
         num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
         num_pages = ceil(num_songs/SONGS_PER_PAGE)
         self.pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
         self.active_page = 0
         self.pages[self.active_page].refresh()
-        self.chosen_num = ""
-        self.button_list = self.buttons.findChildren(QtWidgets.QPushButton)
-        self.song_labels = self.findChildren(QtWidgets.QLabel, QtCore.QRegularExpression("^song"))
-        self.timers = []
         self.page_load()
-        # Connect buttons
+        # Connect buttons to button_click function
         for button in self.button_list:
             button.clicked.connect(partial(self.button_click, button))
-        self.playing = False
-    
+
     def page_load(self):
+        """Loads and displays the currently-selected page.
+        """
         self.text_reset()
         song_titles = [song.title for song in self.pages[self.active_page].tracks]
         for i,title in enumerate(song_titles):
+            # Change the text of each label to the appropriate song title
             label = self.findChild(QtWidgets.QLabel, name=f"song{i}")
             label.setText(title + " ")
-            label.adjustSize()
+            label.adjustSize()  # Needed for the scrollbar to work properly
+            # Set up the label's scrollbar
             scrollbar = label.parentWidget().parentWidget().parentWidget().horizontalScrollBar()
             scrollbar.hide()
             if len(title) > 11:
-                scrollbar.setMaximum(label.width()-label.parentWidget().parentWidget().parentWidget().width())
+                scrollbar.setMaximum(label.width()-label.parentWidget().parentWidget().parentWidget().width())  # Calculate maximum value (as for some reason it doesn't report it properly)
                 self.stop_text_scroll(scrollbar)
-        
 
     def text_reset(self):
+        """Clears all song titles from the screen.
+        """
         for label in self.song_labels:
             label.setText("")
 
-    def start_text_scroll(self, scrollbar, max_val):
+    def start_text_scroll(self, scrollbar : QtWidgets.QScrollBar, max_val : int):
+        """Starts scrolling the songnames of the labels.
+
+        :param scrollbar: scrollbar attached to the label
+        :type scrollbar: QtWidgets.QScrollBar
+        :param max_val: scrollbar maximum value
+        :type max_val: int
+        """
         scrollbar.setValue(scrollbar.value() + 20)
         if scrollbar.value() < max_val:
             timer = QtCore.QTimer()
@@ -63,10 +80,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             timer.setSingleShot(True)
             timer.timeout.connect(partial(self.stop_text_scroll, scrollbar))
             timer.start()
-            self.timers.append(timer)
-        
+            self.timers.append(timer) 
 
-    def stop_text_scroll(self, scrollbar):
+    def stop_text_scroll(self, scrollbar : QtWidgets.QScrollBar):
+        """Stops label scrolling for 3 seconds before continuing.
+
+        :param scrollbar: scrollbar attached to the label
+        :type scrollbar: QtWidgets.QScrollBar
+        """
         scrollbar.setValue(0)
         timer = QtCore.QTimer()
         timer.setInterval(3000)
@@ -74,24 +95,34 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         timer.timeout.connect(partial(self.start_text_scroll, scrollbar, scrollbar.maximum()))
         self.timers.append(timer)
         timer.start()
-        
 
     def button_reset(self):
+        """Resets the state of the buttons.
+        """
         for button in self.button_list:
             button.setStyleSheet(u"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 235, 235, 206), stop:0.35 rgba(255, 188, 188, 80), stop:0.4 rgba(255, 162, 162, 80), stop:0.425 rgba(255, 132, 132, 156), stop:0.44 rgba(252, 128, 128, 80), stop:1 rgba(255, 255, 255, 0));\n"
 "border-radius: 15px;")
         self.chosen_num = ""
 
     # Clicked Buttons
-    def button_click(self, button):
+    def button_click(self, button : QtWidgets.QPushButton):
+        """Handles button push event on main interface.
+
+        :param button: button that has been pushed
+        :type button: QtWidgets.QPushButton
+        """
+        # Paint the pressed button red
         button.setStyleSheet("background-color: rgb(255,0,0);\n""border-radius: 15px;")
         button.repaint()
+        # Case where numbered button is pressed
         if button.text():
             self.chosen_num += button.text()
             if len(self.chosen_num)==2:
                 chosen_track = int(self.chosen_num)
+                # Reset buttons without doing anything if invalid number inputted
                 if chosen_track > len(self.pages[self.active_page].tracks) or chosen_track < 0:
                     self.button_reset()
+                # Pause/play if 00 entered
                 elif chosen_track==0:
                     if self.playing:
                         request("PUT", "https://api.spotify.com/v1/me/player/pause")
@@ -104,12 +135,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     self.pages[self.active_page].tracks[chosen_track-1].play()
                     self.playing = True
                     self.button_reset()
+        # Case where page forward/backward button is pressed
         else:
             self.clear_timers()
             if "forward" in button.objectName():
                 self.active_page += 1
                 if self.active_page >= len(self.pages):
-                    self.active_page = 0       
+                    self.active_page = 0   
             else:
                 self.active_page -= 1
                 if self.active_page < 0:
@@ -119,12 +151,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.button_reset()
 
     def clear_timers(self):
+        """Stops and destroys all currently-active timers.
+        """
         for timer in self.timers:
             timer.stop()
         self.timers = []
-
-                
-
 
 app = QtWidgets.QApplication(sys.argv)
 
