@@ -1,18 +1,16 @@
 from math import ceil
 if __name__=="__main__":
-    from utils import request
+    from utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
 else:
-    from src.utils import request
+    from src.utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
 
-PLAYLIST_ID = "0bluwA0qhGV7ylBKELLFWm"
-SONGS_PER_PAGE = 24
 class Song:
     def __init__(self, title, artist, uri):
         self.title = title
         self.artist = artist
         self.uri = uri
     
-    def play(self, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
+    def play(self, device_id=DEVICE_ID):
         headers = {"Content-Type": "application/json"}
         data = f'{{"uris": ["{self.uri}"],"position_ms": 0}}'
         url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
