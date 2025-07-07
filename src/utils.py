@@ -1,7 +1,16 @@
+"""Utility functions for the jukebox software. 
+
+Includes a wrapper for the python requests module which automatically adds api credentials 
+and generates a new api key if the old one has expired.
+
+Also responsible for reading the user-provided config data (e.g playlist ID).
+"""
+
 import requests
 import json
 import yaml
 
+# Request type variables
 TYPES = {
     "GET": lambda url,headers,data,timeout : requests.get(url=url,headers=headers,data=data,timeout=timeout),
     "POST": lambda url,headers,data,timeout : requests.post(url=url,headers=headers,data=data,timeout=timeout),
@@ -21,7 +30,15 @@ SONGS_PER_PAGE = config["songs_per_page"]
 PLAYLIST_ID = config["playlist_id"]
 
 
-def get_secrets(filepath):
+def get_secrets(filepath : str) -> dict:
+    """Retrieves secrets (api key and refresh token) from given file.
+
+    :param filepath: location of secrets file (usually secrets.json)
+    :type filepath: str
+    :raises KeyError: if the secrets file does not contain a refresh token
+    :return: the secrets as a dictionary
+    :rtype: dict
+    """
     with open(filepath) as f:
         secrets = json.load(f)
     if "refresh_token" not in secrets.keys():
@@ -30,7 +47,17 @@ def get_secrets(filepath):
          secrets = get_new_token(secrets, filepath)
     return secrets
 
-def get_new_token(secrets, filepath):
+def get_new_token(secrets: dict, filepath: str) -> dict:
+    """Retrieves a new api key using a given refresh token, and writes
+    to desired secrets file.
+
+    :param secrets: existing secrets dictionary obtained from existing secrets file
+    :type secrets: dict
+    :param filepath: location of secrets file to write new api key to
+    :type filepath: str
+    :return: new secrets dictionary with new api key
+    :rtype: dict
+    """
     headers={"Content-Type": "application/x-www-form-urlencoded"}
     data=f"grant_type=refresh_token&refresh_token={secrets["refresh_token"]}&client_id={config["client_id"]}&client_secret={config["client_secret"]}"
     response = requests.post(url="https://accounts.spotify.com/api/token", data=data, headers=headers, timeout=1000)
@@ -40,7 +67,31 @@ def get_new_token(secrets, filepath):
         json.dump(secrets, f)
     return secrets
 
-def request(request_type, url, secrets_file="../src/secrets.json", headers={}, data=None, timeout=1000):
+def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict= {}, data: str = None, timeout: int = 1000) -> dict:
+    """Wrapper for the python requests module which automatically incorporates api credentials into the http request. 
+    
+    Automatically obtains new api key if the current one has expired.
+
+    Can be used to make 3 types of http request: GET, POST and PUT.
+
+
+    :param request_type: type of http request to make (GET, POST or PUT)
+    :type request_type: str
+    :param url: url to request
+    :type url: str
+    :param secrets_file: location of secrets file, defaults to "../src/secrets.json"
+    :type secrets_file: str, optional
+    :param headers: any headers required for the http request (EXCLUDING authorization header), defaults to {}
+    :type headers: dict, optional
+    :param data: any data required for the http request, defaults to None
+    :type data: str, optional
+    :param timeout: how long to wait (in ms) for response before giving up, defaults to 1000
+    :type timeout: int, optional
+    :raises ValueError: if an invalid request type is parsed
+    :raises ConnectionAbortedError: if the response is an error message
+    :return: the json response
+    :rtype: dict
+    """
     if request_type not in TYPES:
         raise ValueError("invalid request type.")
     secrets = get_secrets(secrets_file)
