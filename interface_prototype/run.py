@@ -5,13 +5,13 @@ song names.
 """
 from math import ceil
 from functools import partial
+from collections.abc import Callable
 import sys
 from PySide6 import QtWidgets, QtCore
+sys.path.append("../")  # Allows for below imports
 from interface_prototype.app_ui import Ui_MainWindow
 from src.jukebox import Page
 from src.utils import request, PLAYLIST_ID, SONGS_PER_PAGE
-
-sys.path.append("../")  # Allows for imports
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     """Main GUI window.
@@ -58,6 +58,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for label in self.song_labels:
             label.setText("")
 
+    def create_oneshot_timer(self, time : int, bind : Callable):
+        """Creates a oneshot timer, links it to a callable and adds it to the list of timers.
+
+        :param time: how long the timer should last
+        :type time: int
+        :param bind: function to call when the timer is done
+        :type bind: Callable
+        """
+        timer = QtCore.QTimer()
+        timer.setInterval(time)
+        timer.setSingleShot(True)
+        timer.timeout.connect(bind)
+        timer.start()
+        self.timers.append(timer)
+
     def start_text_scroll(self, scrollbar : QtWidgets.QScrollBar, max_val : int):
         """Starts scrolling the songnames of the labels.
 
@@ -68,33 +83,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         """
         scrollbar.setValue(scrollbar.value() + 20)
         if scrollbar.value() < max_val:
-            timer = QtCore.QTimer()
-            timer.setInterval(500)
-            timer.setSingleShot(True)
-            timer.timeout.connect(partial(self.start_text_scroll, scrollbar, max_val))
-            timer.start()
-            self.timers.append(timer)
+            self.create_oneshot_timer(500, partial(self.start_text_scroll, scrollbar, max_val))
         else:
-            timer = QtCore.QTimer()
-            timer.setInterval(3000)
-            timer.setSingleShot(True)
-            timer.timeout.connect(partial(self.stop_text_scroll, scrollbar))
-            timer.start()
-            self.timers.append(timer) 
+            self.create_oneshot_timer(3000, partial(self.stop_text_scroll, scrollbar))
 
     def stop_text_scroll(self, scrollbar : QtWidgets.QScrollBar):
-        """Stops label scrolling for 3 seconds before continuing.
+        """Resets label scrolling before beginning scroll again after 3 seconds.
 
         :param scrollbar: scrollbar attached to the label
         :type scrollbar: QtWidgets.QScrollBar
         """
         scrollbar.setValue(0)
-        timer = QtCore.QTimer()
-        timer.setInterval(3000)
-        timer.setSingleShot(True)
-        timer.timeout.connect(partial(self.start_text_scroll, scrollbar, scrollbar.maximum()))
-        self.timers.append(timer)
-        timer.start()
+        self.create_oneshot_timer(3000, partial(self.start_text_scroll, scrollbar, scrollbar.maximum()))
 
     def button_reset(self):
         """Resets the state of the buttons.
