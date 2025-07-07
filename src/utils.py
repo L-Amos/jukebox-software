@@ -39,13 +39,18 @@ def get_secrets(filepath : str) -> dict:
     :return: the secrets as a dictionary
     :rtype: dict
     """
-    with open(filepath) as f:
-        secrets = json.load(f)
-    if "refresh_token" not in secrets.keys():
-        raise KeyError("secrets file does not have a refresh token.")
-    elif "key" not in secrets.keys():
-         secrets = get_new_token(secrets, filepath)
-    return secrets
+    try:
+        with open(filepath) as f:
+            secrets = json.load(f)
+    except FileNotFoundError:
+        get_api_credentials(filepath)
+        get_secrets(filepath)
+    else:
+        if "refresh_token" not in secrets.keys():
+            raise KeyError("secrets file does not have a refresh token.")
+        elif "key" not in secrets.keys():
+            secrets = get_new_token(secrets, filepath)
+        return secrets
 
 def get_new_token(secrets: dict, filepath: str) -> dict:
     """Retrieves a new api key using a given refresh token, and writes
@@ -99,7 +104,7 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
     secrets = get_secrets(secrets_file)
     failure = True
     while failure:
-        headers["Authorization"] = "Bearer "+ secrets['key']
+        headers["Authorization"] = "Bearer "+ secrets['access_token']
         response = TYPES[request_type](url, headers, data, timeout)
         try:
             json_response = json.loads(response.content)
@@ -113,3 +118,12 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
         else:
             failure = False
     return json_response
+
+def get_api_credentials(filepath : str):
+    import spotipy
+    from spotipy.oauth2 import SpotifyOAuth
+
+    scope = "user-library-read"
+
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_path=filepath, client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
+    sp.current_user_saved_tracks()  # Needed to actually obtain the api credentials
