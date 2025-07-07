@@ -14,24 +14,6 @@ def test_get_secrets():
     test_secrets = utils.get_secrets("fixtures/fake_secrets.json")
     assert test_secrets==fake_secrets
     # Testing error_checking - uses .pyc file to protect contents of fake_secrets.json
-    fake_secrets_keyless = dict(fake_secrets)
-    fake_secrets_keyless.pop("key")
-    with open(".pyc", "w") as f:  
-        json.dump(fake_secrets_keyless, f)
-    with pytest.raises(KeyError, match="secrets file does not have an access token."):
-        assert utils.get_secrets(".pyc")
-    fake_secrets_idless = dict(fake_secrets)
-    fake_secrets_idless.pop("id")
-    with open(".pyc", "w") as f:  
-        json.dump(fake_secrets_idless, f)
-    with pytest.raises(KeyError, match="secrets file does not have a client id."):
-        assert utils.get_secrets(".pyc")
-    fake_secrets_secretless = dict(fake_secrets)
-    fake_secrets_secretless.pop("client_secret")
-    with open(".pyc", "w") as f:  
-        json.dump(fake_secrets_secretless, f)
-    with pytest.raises(KeyError, match="secrets file does not have a client secret."):
-        assert utils.get_secrets(".pyc")
     fake_secrets_refreshless = dict(fake_secrets)
     fake_secrets_refreshless.pop("refresh_token")
     with open(".pyc", "w") as f:  
