@@ -7,8 +7,8 @@ Also responsible for reading the user-provided config data (e.g playlist ID).
 """
 
 import os
-import requests
 import json
+import requests
 import yaml
 
 # Request type variables
@@ -19,7 +19,7 @@ TYPES = {
 }
 
 # Reading config vars
-with open("../config.yaml") as f:
+with open("../config.yaml", encoding="utf-8") as f:
     config = yaml.safe_load(f)
     # Error handling
     if not config["client_id"]:
@@ -41,7 +41,7 @@ def get_secrets(filepath : str) -> dict:
     """
     if not os.path.exists(filepath):
         get_api_credentials(filepath)
-    with open(filepath) as f:
+    with open(filepath, encoding="utf-8") as f:
         secrets = json.load(f)
     if "refresh_token" not in secrets.keys() or "access_token" not in secrets.keys():
         get_api_credentials(filepath)
@@ -64,7 +64,7 @@ def get_new_token(secrets: dict, filepath: str) -> dict:
     response = requests.post(url="https://accounts.spotify.com/api/token", data=data, headers=headers, timeout=1000)
     secrets["access_token"] = json.loads(response.content)["access_token"]
     # Write new key to file
-    with open(filepath, "w") as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         json.dump(secrets, f)
     return secrets
 
