@@ -7,8 +7,8 @@ from functools import partial
 
 from math import ceil
 
-from src.jukebox import PLAYLIST_ID, SONGS_PER_PAGE, Page
-from src.utils import request
+from src.jukebox import Page
+from src.utils import request, PLAYLIST_ID, SONGS_PER_PAGE
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
