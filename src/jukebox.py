@@ -1,3 +1,11 @@
+"""Main jukebox software.
+
+Uses spotify web API to obtain the contents of a playlist (set in config.yaml). Presents
+user with the songs of the playlist split into pages of a set length (set in config.yaml). Upon user inputting
+the number of the desired song on the page, the web API is used to play the song on a chosen device (set in config.yaml).
+
+"""
+
 from math import ceil
 if __name__=="__main__":
     from utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
@@ -5,32 +13,54 @@ else:
     from src.utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
 
 class Song:
-    def __init__(self, title, artist, uri):
+    """General song class.
+    """
+    def __init__(self, title : str, artist : str, uri : str):
         self.title = title
         self.artist = artist
         self.uri = uri
     
-    def play(self, device_id=DEVICE_ID):
+    def play(self, device_id : str = DEVICE_ID):
+        """Plays the song on a given device.
+
+        :param device_id: ID of the device to play on, defaults to ID in contents.yaml
+        :type device_id: str, optional
+        """
         headers = {"Content-Type": "application/json"}
         data = f'{{"uris": ["{self.uri}"],"position_ms": 0}}'
         url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
         request("PUT", url, headers=headers, data=data)
 
 class Page:
-    def __init__(self, playlist_id, page_num):
+    """Class for a page of songs.
+    """
+    def __init__(self, playlist_id : str, page_num : int):
         self.playlist_id = playlist_id
         self.page_num = page_num
         self.tracks = get_tracks(playlist_id, (page_num)*SONGS_PER_PAGE)
 
     def display(self):
+        """Displays the contents of the page (ONLY IF THIS FILE IS RUN).
+        """
         print(f"PAGE {self.page_num+1}\n" + "="*len(f"PAGE {self.page_num+1}"))
         for i in range(0, len(self.tracks)):
             print(f"{i+1:02}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
 
     def refresh(self):
+        """Refreshes the page songs by querying the spotify web API.
+        """
         self.tracks = get_tracks(self.playlist_id, (self.page_num)*SONGS_PER_PAGE)
 
-def get_tracks(playlist_id, offset):
+def get_tracks(playlist_id : str, offset : int) -> list[Song]:
+    """Retrieves tracks from a given playlist.
+
+    :param playlist_id: ID of playlist to get tracks from
+    :type playlist_id: str
+    :param offset: offset from the start from which to get the tracks (e.g offset of 5 will get the 6th track onwards)
+    :type offset: int
+    :return: List of Song instances corresponding to songs in playlist
+    :rtype: list[Song]
+    """
     tracklist = []
     response = request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={offset}")
     items = response["items"]
@@ -41,6 +71,7 @@ def get_tracks(playlist_id, offset):
         tracklist.append(Song(name, artist, uri))
     return tracklist
 
+# Basic interface for when this file is run
 if __name__ == "__main__":
     num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
     num_pages = ceil(num_songs/SONGS_PER_PAGE)
@@ -50,6 +81,7 @@ if __name__ == "__main__":
         pages[active_page].refresh()
         pages[active_page].display()
         user_input = input("\nPick A Song\n'<' To Go Back\n'>' To Go Forwards\n")
+        # Parsing user input
         if user_input=="q":
             break
         elif user_input == "<":
