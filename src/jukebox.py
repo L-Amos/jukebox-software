@@ -19,7 +19,7 @@ class Song:
         self.title = title
         self.artist = artist
         self.uri = uri
-    
+
     def play(self, device_id : str = DEVICE_ID):
         """Plays the song on a given device.
 
@@ -37,7 +37,7 @@ class Page:
     def __init__(self, playlist_id : str, page_num : int):
         self.playlist_id = playlist_id
         self.page_num = page_num
-        self.tracks = get_tracks(playlist_id, (page_num)*SONGS_PER_PAGE)
+        self.refresh()
 
     def display(self):
         """Displays the contents of the page (ONLY IF THIS FILE IS RUN).
@@ -48,28 +48,20 @@ class Page:
 
     def refresh(self):
         """Refreshes the page songs by querying the spotify web API.
+
+        :param playlist_id: ID of playlist to get tracks from
+        :type playlist_id: str
+        :param offset: offset from the start from which to get the tracks (e.g offset of 5 will get the 6th track onwards)
+        :type offset: int
         """
-        self.tracks = get_tracks(self.playlist_id, (self.page_num)*SONGS_PER_PAGE)
-
-def get_tracks(playlist_id : str, offset : int) -> list[Song]:
-    """Retrieves tracks from a given playlist.
-
-    :param playlist_id: ID of playlist to get tracks from
-    :type playlist_id: str
-    :param offset: offset from the start from which to get the tracks (e.g offset of 5 will get the 6th track onwards)
-    :type offset: int
-    :return: List of Song instances corresponding to songs in playlist
-    :rtype: list[Song]
-    """
-    tracklist = []
-    response = request("GET", f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={offset}")
-    items = response["items"]
-    for item in items:
-        name = item["track"]["name"]
-        artist = item["track"]["artists"][0]["name"]
-        uri = item["track"]["uri"]
-        tracklist.append(Song(name, artist, uri))
-    return tracklist
+        self.tracks = []
+        response = request("GET", f"https://api.spotify.com/v1/playlists/{self.playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={(self.page_num)*SONGS_PER_PAGE}")
+        items = response["items"]
+        for item in items:
+            name = item["track"]["name"]
+            artist = item["track"]["artists"][0]["name"]
+            uri = item["track"]["uri"]
+            self.tracks.append(Song(name, artist, uri))
 
 # Basic interface for when this file is run
 if __name__ == "__main__":
@@ -101,4 +93,4 @@ if __name__ == "__main__":
                 if song_selection > len(pages[active_page].tracks) or song_selection <= 0:
                     print("\nERROR: ENTER A VALID SONG NUMBER.")
                 else:
-                   pages[active_page].tracks[song_selection-1].play()
+                    pages[active_page].tracks[song_selection-1].play()
