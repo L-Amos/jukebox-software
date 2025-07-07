@@ -118,9 +118,9 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
 
 def get_api_credentials(filepath : str):
     import spotipy
-    from spotipy.oauth2 import SpotifyOAuth
+    from spotipy.oauth2 import SpotifyOAuth, CacheFileHandler
 
     scope = "playlist-read-private playlist-read-collaborative user-modify-playback-state"
 
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_path=filepath, client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_handler=CacheFileHandler(cache_path=filepath), client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
     sp.current_user_playlists()  # Needed to actually obtain the api credentials
