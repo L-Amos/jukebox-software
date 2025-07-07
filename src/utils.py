@@ -22,9 +22,9 @@ TYPES = {
 with open("../config.yaml") as f:
     config = yaml.safe_load(f)
     # Error handling
-    if"client_id" not in config.keys():
+    if not config["client_id"]:
         raise KeyError("config file does not have a client id.")
-    elif "client_secret" not in config.keys():
+    elif not config["client_secret"]:
         raise KeyError("config file does not have a client secret.")
 DEVICE_ID = config["device_id"]
 SONGS_PER_PAGE = config["songs_per_page"]
