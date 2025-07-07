@@ -26,8 +26,8 @@ def test_request():
         fake_secrets = json.loads(f.read())
     with open(".pyc", "w") as f:  # Writing to tmp file to protect fake_secrets.json
         json.dump(fake_secrets, f)
-    response = utils.request("GET", "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg", secrets_file=".pyc")
-    expected_response = {'external_urls': {'spotify': 'https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg'}, 'followers': {'href': None, 'total': 11669454}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg', 'id': '0TnOYISbd1XYRBk9myaseg', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb4051627b19277613e0e62a34', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051744051627b19277613e0e62a34', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1784051627b19277613e0e62a34', 'height': 160, 'width': 160}], 'name': 'Pitbull', 'popularity': 89, 'type': 'artist', 'uri': 'spotify:artist:0TnOYISbd1XYRBk9myaseg'}
+    response = utils.request("GET", "https://api.spotify.com/v1/users/gsi6dp1hadnzqy5i3nv15rq37", secrets_file=".pyc")
+    expected_response ={"display_name": "JodbyBerundi","external_urls": {"spotify": "https://open.spotify.com/user/gsi6dp1hadnzqy5i3nv15rq37"},"followers": {"href": None,"total": 1},"href": "https://api.spotify.com/v1/users/gsi6dp1hadnzqy5i3nv15rq37","id": "gsi6dp1hadnzqy5i3nv15rq37","images": [],"type": "user","uri": "spotify:user:gsi6dp1hadnzqy5i3nv15rq37"}
     assert response==expected_response
     # Check a new key was definitely generated
     with open(".pyc", "r") as f:  # Writing to tmp file to protect fake_secrets.json
