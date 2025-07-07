@@ -6,6 +6,7 @@ and generates a new api key if the old one has expired.
 Also responsible for reading the user-provided config data (e.g playlist ID).
 """
 
+import os
 import requests
 import json
 import yaml
@@ -39,18 +40,14 @@ def get_secrets(filepath : str) -> dict:
     :return: the secrets as a dictionary
     :rtype: dict
     """
-    try:
-        with open(filepath) as f:
-            secrets = json.load(f)
-    except FileNotFoundError:
+    if not os.path.exists(filepath):
+        get_api_credentials(filepath)
+    with open(filepath) as f:
+        secrets = json.load(f)
+    if "refresh_token" not in secrets.keys() or "access_token" not in secrets.keys():
         get_api_credentials(filepath)
         get_secrets(filepath)
-    else:
-        if "refresh_token" not in secrets.keys():
-            raise KeyError("secrets file does not have a refresh token.")
-        elif "key" not in secrets.keys():
-            secrets = get_new_token(secrets, filepath)
-        return secrets
+    return secrets
 
 def get_new_token(secrets: dict, filepath: str) -> dict:
     """Retrieves a new api key using a given refresh token, and writes
