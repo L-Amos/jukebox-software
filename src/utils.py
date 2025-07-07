@@ -30,7 +30,6 @@ DEVICE_ID = config["device_id"]
 SONGS_PER_PAGE = config["songs_per_page"]
 PLAYLIST_ID = config["playlist_id"]
 
-
 def get_secrets(filepath : str) -> dict:
     """Retrieves secrets (api key and refresh token) from given file.
 
@@ -69,7 +68,7 @@ def get_new_token(secrets: dict, filepath: str) -> dict:
         json.dump(secrets, f)
     return secrets
 
-def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict = None, data: str = None, timeout: int = 1000) -> dict:
+def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict = None, data: str = None, timeout: int = 10) -> dict:
     """Wrapper for the python requests module which automatically incorporates api credentials into the http request. 
     
     Automatically obtains new api key if the current one has expired.
@@ -87,7 +86,7 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
     :type headers: dict, optional
     :param data: any data required for the http request, defaults to None
     :type data: str, optional
-    :param timeout: how long to wait (in ms) for response before giving up, defaults to 1000
+    :param timeout: how long to wait (in s) for response before giving up, defaults to 1000
     :type timeout: int, optional
     :raises ValueError: if an invalid request type is parsed
     :raises ConnectionAbortedError: if the response is an error message
