@@ -18,18 +18,6 @@ TYPES = {
     "PUT": lambda url,headers,data,timeout : requests.put(url=url,headers=headers,data=data,timeout=timeout)
 }
 
-# Reading config vars
-with open("../config.yaml", encoding="utf-8") as f:
-    config = yaml.safe_load(f)
-    # Error handling
-    if not config["client_id"]:
-        raise KeyError("config file does not have a client id.")
-    elif not config["client_secret"]:
-        raise KeyError("config file does not have a client secret.")
-DEVICE_ID = config["device_id"]
-SONGS_PER_PAGE = config["songs_per_page"]
-PLAYLIST_ID = config["playlist_id"]
-
 def get_secrets(filepath : str) -> dict:
     """Retrieves secrets (api key and refresh token) from given file.
 
@@ -123,3 +111,15 @@ def get_api_credentials(filepath : str):
 
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_handler=CacheFileHandler(cache_path=filepath), client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
     sp.current_user_playlists()  # Needed to actually obtain the api credentials
+
+# Reading config vars
+with open("../config.yaml", encoding="utf-8") as config_file:
+    config = yaml.safe_load(config_file)
+    # Error handling
+    if not config["client_id"]:
+        raise KeyError("config file does not have a client id.")
+    elif not config["client_secret"]:
+        raise KeyError("config file does not have a client secret.")
+DEVICE_ID = config["device_id"]
+SONGS_PER_PAGE = config["songs_per_page"]
+PLAYLIST_ID = config["playlist_id"]
