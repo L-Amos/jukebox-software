@@ -5,7 +5,7 @@ import pytest
 sys.path.append("../")
 
 import json
-import utils
+from src import utils
 
 def test_get_secrets():
     with open("fixtures/fake_secrets.json") as f:
