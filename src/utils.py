@@ -104,6 +104,11 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
     return json_response
 
 def get_api_credentials(filepath : str):
+    """Generates brand new api credentials (api token and refresh token) if not present on system.
+
+    :param filepath: file in which to save new credentials.
+    :type filepath: str
+    """
     import spotipy
     from spotipy.oauth2 import SpotifyOAuth, CacheFileHandler
 
