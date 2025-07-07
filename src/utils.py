@@ -120,7 +120,7 @@ def get_api_credentials(filepath : str):
     import spotipy
     from spotipy.oauth2 import SpotifyOAuth
 
-    scope = "user-library-read"
+    scope = "playlist-read-private playlist-read-collaborative user-modify-playback-state"
 
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_path=filepath, client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
-    sp.current_user_saved_tracks()  # Needed to actually obtain the api credentials
+    sp.current_user_playlists()  # Needed to actually obtain the api credentials
