@@ -43,12 +43,6 @@ def get_tracks(playlist_id, offset):
         tracklist.append(Song(name, artist, uri))
     return tracklist
 
-def play_song(song_uri, device_id="01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1"):
-    headers = {"Content-Type": "application/json"}
-    data = f'{{"uris": ["{song_uri}"],"position_ms": 0}}'
-    url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
-    request("PUT", url, headers=headers, data=data)
-
 if __name__ == "__main__":
     num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
     num_pages = ceil(num_songs/SONGS_PER_PAGE)
@@ -77,4 +71,4 @@ if __name__ == "__main__":
                 if song_selection > len(pages[active_page].tracks) or song_selection <= 0:
                     print("\nERROR: ENTER A VALID SONG NUMBER.")
                 else:
-                    play_song(pages[active_page].tracks[song_selection-1].uri)
+                   pages[active_page].tracks[song_selection-1].play()
