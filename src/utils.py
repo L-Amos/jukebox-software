@@ -31,14 +31,13 @@ def get_secrets(filepath):
     return secrets
 
 def get_new_token(secrets, filepath):
-   
     headers={"Content-Type": "application/x-www-form-urlencoded"}
     data=f"grant_type=refresh_token&refresh_token={secrets["refresh_token"]}&client_id={config["client_id"]}&client_secret={config["client_secret"]}"
     response = requests.post(url="https://accounts.spotify.com/api/token", data=data, headers=headers, timeout=1000)
     secrets["key"] = json.loads(response.content)["access_token"]
     # Write new key to file
     with open(filepath, "w") as f:
-        yaml.dump(secrets, f)
+        json.dump(secrets, f)
     return secrets
 
 def request(request_type, url, secrets_file="../src/secrets.json", headers={}, data=None, timeout=1000):
