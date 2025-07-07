@@ -43,7 +43,7 @@ class Page:
         """Displays the contents of the page (ONLY IF THIS FILE IS RUN).
         """
         print(f"PAGE {self.page_num+1}\n" + "="*len(f"PAGE {self.page_num+1}"))
-        for i in range(0, len(self.tracks)):
+        for i,_ in enumerate(self.tracks):
             print(f"{i+1:02}:\t{self.tracks[i].title} - {self.tracks[i].artist}")
 
     def refresh(self):
