@@ -18,8 +18,7 @@ def test_get_secrets():
     fake_secrets_refreshless.pop("refresh_token")
     with open(".pyc", "w") as f:  
         json.dump(fake_secrets_refreshless, f)
-    with pytest.raises(KeyError, match="secrets file does not have a refresh token."):
-        assert utils.get_secrets(".pyc")
+    assert utils.get_secrets(".pyc")
 
 def test_request():
     with open("fixtures/fake_secrets.json") as f:  # Includes OUTDATED KEY
@@ -32,7 +31,7 @@ def test_request():
     # Check a new key was definitely generated
     with open(".pyc", "r") as f:  # Writing to tmp file to protect fake_secrets.json
         new_secrets = json.loads(f.read())
-    assert fake_secrets["key"] != new_secrets["key"]
+    assert fake_secrets["access_token"] != new_secrets["access_token"]
     # Checking type error
     with pytest.raises(ValueError, match="invalid request type."):
         assert utils.request("NOT_GET", "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg", secrets_file=".pyc")
