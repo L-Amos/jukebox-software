@@ -48,9 +48,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for label in self.song_labels:
             label.setText("")
 
-    def start_text_scroll(self, scrollbar, max):
+    def start_text_scroll(self, scrollbar, maximum):
         scrollbar.setValue(scrollbar.value() + 20)
-        if scrollbar.value() < max:
+        if scrollbar.value() < maximum:
             timer = QtCore.QTimer()
             timer.setInterval(500)
             timer.setSingleShot(True)
