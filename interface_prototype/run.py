@@ -73,17 +73,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         timer.start()
         self.timers.append(timer)
 
-    def start_text_scroll(self, scrollbar : QtWidgets.QScrollBar, max_val : int):
+    def start_text_scroll(self, scrollbar : QtWidgets.QScrollBar):
         """Starts scrolling the songnames of the labels.
 
         :param scrollbar: scrollbar attached to the label
         :type scrollbar: QtWidgets.QScrollBar
-        :param max_val: scrollbar maximum value
-        :type max_val: int
         """
         scrollbar.setValue(scrollbar.value() + 20)
-        if scrollbar.value() < max_val:
-            self.create_oneshot_timer(500, partial(self.start_text_scroll, scrollbar, max_val))
+        if scrollbar.value() < scrollbar.maximum():
+            self.create_oneshot_timer(500, partial(self.start_text_scroll, scrollbar))
         else:
             self.create_oneshot_timer(3000, partial(self.stop_text_scroll, scrollbar))
 
@@ -94,13 +92,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         :type scrollbar: QtWidgets.QScrollBar
         """
         scrollbar.setValue(0)
-        self.create_oneshot_timer(3000, partial(self.start_text_scroll, scrollbar, scrollbar.maximum()))
+        self.create_oneshot_timer(3000, partial(self.start_text_scroll, scrollbar))
 
     def button_reset(self):
         """Resets the state of the buttons.
         """
         for button in self.button_list:
-            button.setStyleSheet(u"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 235, 235, 206), stop:0.35 rgba(255, 188, 188, 80), stop:0.4 rgba(255, 162, 162, 80), stop:0.425 rgba(255, 132, 132, 156), stop:0.44 rgba(252, 128, 128, 80), stop:1 rgba(255, 255, 255, 0));\n"
+            button.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 235, 235, 206), stop:0.35 rgba(255, 188, 188, 80), stop:0.4 rgba(255, 162, 162, 80), stop:0.425 rgba(255, 132, 132, 156), stop:0.44 rgba(252, 128, 128, 80), stop:1 rgba(255, 255, 255, 0));\n"
 "border-radius: 15px;")
         self.chosen_num = ""
 
@@ -112,7 +110,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         :type button: QtWidgets.QPushButton
         """
         # Paint the pressed button red
-        button.setStyleSheet("background-color: rgb(255,0,0);\n""border-radius: 15px;")
+        button.setStyleSheet("background-color: rgb(255,0,0);\nborder-radius: 15px;")
         button.repaint()
         # Case where numbered button is pressed
         if button.text():
