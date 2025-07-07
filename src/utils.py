@@ -67,7 +67,7 @@ def get_new_token(secrets: dict, filepath: str) -> dict:
         json.dump(secrets, f)
     return secrets
 
-def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict= {}, data: str = None, timeout: int = 1000) -> dict:
+def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict = None, data: str = None, timeout: int = 1000) -> dict:
     """Wrapper for the python requests module which automatically incorporates api credentials into the http request. 
     
     Automatically obtains new api key if the current one has expired.
@@ -94,6 +94,8 @@ def request(request_type: str, url: str, secrets_file: str = "../src/secrets.jso
     """
     if request_type not in TYPES:
         raise ValueError("invalid request type.")
+    if not headers:
+        headers = {}
     secrets = get_secrets(secrets_file)
     failure = True
     while failure:
