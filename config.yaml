@@ -1,8 +1,8 @@
 # Client  Credentials
-client_id: 6ce1f49e3c7a47709cdeba152e55fa91
-client_secret: 693c7a9cd6dd450bb6c6210e055d3318
+client_id: 
+client_secret: 
 
 # App Preferences
-device_id: 01f5bffb-732b-4201-955a-1c0dfb727360_amzn_1
-playlist_id: 5XrU6HqhgFevHvrDE0BQT9
-songs_per_page: 24
+device_id: 
+playlist_id: 
+songs_per_page: 
