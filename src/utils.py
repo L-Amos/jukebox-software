@@ -48,7 +48,7 @@ def get_new_token(secrets: dict, filepath: str) -> dict:
     :rtype: dict
     """
     headers={"Content-Type": "application/x-www-form-urlencoded"}
-    data=f"grant_type=refresh_token&refresh_token={secrets["refresh_token"]}&client_id={config["client_id"]}&client_secret={config["client_secret"]}"
+    data=f'grant_type=refresh_token&refresh_token={secrets["refresh_token"]}&client_id={config["client_id"]}&client_secret={config["client_secret"]}'
     response = requests.post(url="https://accounts.spotify.com/api/token", data=data, headers=headers, timeout=1000)
     secrets["access_token"] = json.loads(response.content)["access_token"]
     # Write new key to file
