@@ -20,13 +20,13 @@ BUTTONS = {
     4: 3,
     17: 4,
     27: 5,
-    22: "forward",
+    22: "backward",
     14: 6,
     15: 7,
     18: 8,
     23: 9,
     24: 0,
-    25: "backward"
+    25: "forward"
 }
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
