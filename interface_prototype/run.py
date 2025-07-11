@@ -7,11 +7,27 @@ from math import ceil
 from functools import partial
 from collections.abc import Callable
 import sys
+import pigpio
 from PySide6 import QtWidgets, QtCore
 sys.path.append("../")  # Allows for below imports
 from interface_prototype.app_ui import Ui_MainWindow
 from src.jukebox import Page
 from src.utils import request, PLAYLIST_ID, SONGS_PER_PAGE
+
+BUTTONS = {
+    2: 1,
+    3: 2,
+    4: 3,
+    17: 4,
+    27: 5,
+    22: "forward",
+    14: 6,
+    15: 7,
+    18: 8,
+    23: 9,
+    24: 0,
+    25: "backward"
+}
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     """Main GUI window.
@@ -31,9 +47,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.active_page = 0
         self.pages[self.active_page].refresh()
         self.page_load()
+        self.chosen_num = ""
         # Connect buttons to button_click function
         for button in self.button_list:
             button.clicked.connect(partial(self.button_click, button))
+            button.hide()
 
     def page_load(self):
         """Loads and displays the currently-selected page.
@@ -147,16 +165,28 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.pages[self.active_page].refresh()
             self.page_load()
             self.button_reset()
-
+    
     def clear_timers(self):
         """Stops and destroys all currently-active timers.
         """
         for timer in self.timers:
             timer.stop()
         self.timers = []
+    
+    def gpio_press(self, button, _,_2):
+        pressed = BUTTONS[button]
+        pressed_button = next(button for button in self.button_list if str(pressed) in button.objectName())
+        pressed_button.click()
 
 app = QtWidgets.QApplication(sys.argv)
 
 window = MainWindow()
+# GPIO
+pi = pigpio.pi()
+# Connect buttons to functions
+for button in BUTTONS:
+    pi.set_glitch_filter(button, 1000)  # Deals with switch bounce
+    pi.callback(button, func=window.gpio_press)
+
 window.show()
 app.exec()
