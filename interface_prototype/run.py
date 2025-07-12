@@ -184,6 +184,8 @@ window = MainWindow()
 pi = pigpio.pi()
 # Connect buttons to functions
 for button in BUTTONS:
+    pi.set_mode(button, pigpio.INPUT)
+    pi.set_pull_up_down(button, pigpio.PUD_UP)
     pi.set_glitch_filter(button, 1000)  # Deals with switch bounce
     pi.callback(button, func=window.gpio_press)
 
