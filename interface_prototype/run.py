@@ -51,7 +51,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Connect buttons to button_click function
         for button in self.button_list:
             button.clicked.connect(partial(self.button_click, button))
-            button.hide()
 
     def page_load(self):
         """Loads and displays the currently-selected page.
