@@ -133,6 +133,5 @@ with open("../config.yaml", encoding="utf-8") as config_file:
         raise KeyError("config file does not have a client secret.")
 
 device_name = config["device_name"]
-DEVICE_ID = refresh_device_id()
 SONGS_PER_PAGE = config["songs_per_page"]
 PLAYLIST_ID = config["playlist_id"]
