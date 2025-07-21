@@ -29,7 +29,12 @@ class Song:
         headers = {"Content-Type": "application/json"}
         data = f'{{"uris": ["{self.uri}"],"position_ms": 0}}'
         url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
-        request("PUT", url, headers=headers, data=data)
+        try:
+            request("PUT", url, headers=headers, data=data)
+        except ConnectionAbortedError as e:
+            print(str(e))
+            pass
+
 
 class Page:
     """Class for a page of songs.
