@@ -3,6 +3,6 @@ client_id:
 client_secret: 
 
 # App Preferences
-device_id: 
+device_name: 
 playlist_id: 
 songs_per_page: 
