@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setStyleSheet(u"background-color: rgb(255, 180, 0);")
         self.buttons = QFrame(self.centralwidget)
         self.buttons.setObjectName(u"buttons")
-        self.buttons.setGeometry(QRect(590, 110, 0, 0))
+        self.buttons.setGeometry(QRect(580, 110, 0, 0))
         self.buttons.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
 "border: none;")
         self.buttons.setFrameShape(QFrame.Shape.StyledPanel)
@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
         self.buttonforward.setFont(font1)
         self.buttonforward.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.buttonforward.setAutoFillBackground(False)
-        self.buttonforward.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.buttonforward.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.GoNext))
         self.buttonforward.setIcon(icon)
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.buttonbackward.setFont(font1)
         self.buttonbackward.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.buttonbackward.setAutoFillBackground(False)
-        self.buttonbackward.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.buttonbackward.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         icon1 = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.GoPrevious))
         self.buttonbackward.setIcon(icon1)
@@ -64,56 +64,56 @@ class Ui_MainWindow(object):
         self.button5.setGeometry(QRect(0, 197, 30, 30))
         self.button5.setFont(font1)
         self.button5.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button5.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button5.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button0 = QPushButton(self.buttons)
         self.button0.setObjectName(u"button0")
         self.button0.setGeometry(QRect(54, 197, 30, 30))
         self.button0.setFont(font1)
         self.button0.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button0.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button0.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button4 = QPushButton(self.buttons)
         self.button4.setObjectName(u"button4")
         self.button4.setGeometry(QRect(1, 149, 30, 30))
         self.button4.setFont(font1)
         self.button4.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button4.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button4.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button9 = QPushButton(self.buttons)
         self.button9.setObjectName(u"button9")
         self.button9.setGeometry(QRect(54, 149, 30, 30))
         self.button9.setFont(font1)
         self.button9.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button9.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button9.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button3 = QPushButton(self.buttons)
         self.button3.setObjectName(u"button3")
         self.button3.setGeometry(QRect(1, 101, 30, 30))
         self.button3.setFont(font1)
         self.button3.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button3.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button3.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button8 = QPushButton(self.buttons)
         self.button8.setObjectName(u"button8")
         self.button8.setGeometry(QRect(54, 101, 30, 30))
         self.button8.setFont(font1)
         self.button8.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button8.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button8.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button2 = QPushButton(self.buttons)
         self.button2.setObjectName(u"button2")
         self.button2.setGeometry(QRect(1, 50, 30, 30))
         self.button2.setFont(font1)
         self.button2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button2.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button2.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button1 = QPushButton(self.buttons)
         self.button1.setObjectName(u"button1")
         self.button1.setGeometry(QRect(2, 2, 30, 30))
         self.button1.setFont(font1)
         self.button1.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button1.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button1.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button1.setFlat(False)
         self.button6 = QPushButton(self.buttons)
@@ -121,24 +121,24 @@ class Ui_MainWindow(object):
         self.button6.setGeometry(QRect(55, 3, 30, 30))
         self.button6.setFont(font1)
         self.button6.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button6.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button6.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.button7 = QPushButton(self.buttons)
         self.button7.setObjectName(u"button7")
         self.button7.setGeometry(QRect(55, 52, 30, 30))
         self.button7.setFont(font1)
         self.button7.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button7.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.button7.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea = QScrollArea(self.centralwidget)
         self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setGeometry(QRect(60, 0, 263, 66))
+        self.scrollArea.setGeometry(QRect(50, 0, 263, 66))
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
         self.scrollArea.setSizePolicy(sizePolicy)
-        self.scrollArea.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -156,7 +156,7 @@ class Ui_MainWindow(object):
         font2.setFamilies([u"Arcane Nine"])
         font2.setPointSize(18)
         self.song0.setFont(font2)
-        self.song0.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song0.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song0.setWordWrap(False)
 
@@ -165,10 +165,10 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.scrollArea_12 = QScrollArea(self.centralwidget)
         self.scrollArea_12.setObjectName(u"scrollArea_12")
-        self.scrollArea_12.setGeometry(QRect(397, 0, 250, 66))
+        self.scrollArea_12.setGeometry(QRect(387, 0, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_12.sizePolicy().hasHeightForWidth())
         self.scrollArea_12.setSizePolicy(sizePolicy)
-        self.scrollArea_12.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_12.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_12.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_12.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -183,7 +183,7 @@ class Ui_MainWindow(object):
         self.song6 = QLabel(self.scrollAreaWidgetContents_27)
         self.song6.setObjectName(u"song6")
         self.song6.setFont(font2)
-        self.song6.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song6.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_26.addWidget(self.song6)
@@ -191,37 +191,37 @@ class Ui_MainWindow(object):
         self.scrollArea_12.setWidget(self.scrollAreaWidgetContents_27)
         self.num = QLabel(self.centralwidget)
         self.num.setObjectName(u"num")
-        self.num.setGeometry(QRect(357, 0, 40, 51))
+        self.num.setGeometry(QRect(347, 0, 40, 51))
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.num.sizePolicy().hasHeightForWidth())
         self.num.setSizePolicy(sizePolicy1)
         self.num.setFont(font2)
-        self.num.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.num_3 = QLabel(self.centralwidget)
         self.num_3.setObjectName(u"num_3")
-        self.num_3.setGeometry(QRect(20, 0, 40, 51))
+        self.num_3.setGeometry(QRect(10, 0, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_3.sizePolicy().hasHeightForWidth())
         self.num_3.setSizePolicy(sizePolicy1)
         self.num_3.setFont(font2)
-        self.num_3.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_3.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.num_2 = QLabel(self.centralwidget)
         self.num_2.setObjectName(u"num_2")
-        self.num_2.setGeometry(QRect(357, 85, 40, 51))
+        self.num_2.setGeometry(QRect(347, 85, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_2.sizePolicy().hasHeightForWidth())
         self.num_2.setSizePolicy(sizePolicy1)
         self.num_2.setFont(font2)
-        self.num_2.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_2.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_25 = QScrollArea(self.centralwidget)
         self.scrollArea_25.setObjectName(u"scrollArea_25")
-        self.scrollArea_25.setGeometry(QRect(397, 85, 250, 66))
+        self.scrollArea_25.setGeometry(QRect(387, 85, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_25.sizePolicy().hasHeightForWidth())
         self.scrollArea_25.setSizePolicy(sizePolicy)
-        self.scrollArea_25.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_25.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_25.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_25.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -236,7 +236,7 @@ class Ui_MainWindow(object):
         self.song7 = QLabel(self.scrollAreaWidgetContents_42)
         self.song7.setObjectName(u"song7")
         self.song7.setFont(font2)
-        self.song7.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song7.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_41.addWidget(self.song7)
@@ -244,18 +244,18 @@ class Ui_MainWindow(object):
         self.scrollArea_25.setWidget(self.scrollAreaWidgetContents_42)
         self.num_4 = QLabel(self.centralwidget)
         self.num_4.setObjectName(u"num_4")
-        self.num_4.setGeometry(QRect(20, 85, 40, 51))
+        self.num_4.setGeometry(QRect(10, 85, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_4.sizePolicy().hasHeightForWidth())
         self.num_4.setSizePolicy(sizePolicy1)
         self.num_4.setFont(font2)
-        self.num_4.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_4.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_2 = QScrollArea(self.centralwidget)
         self.scrollArea_2.setObjectName(u"scrollArea_2")
-        self.scrollArea_2.setGeometry(QRect(60, 85, 263, 66))
+        self.scrollArea_2.setGeometry(QRect(50, 85, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_2.sizePolicy().hasHeightForWidth())
         self.scrollArea_2.setSizePolicy(sizePolicy)
-        self.scrollArea_2.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_2.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_2.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_2.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -270,7 +270,7 @@ class Ui_MainWindow(object):
         self.song1 = QLabel(self.scrollAreaWidgetContents_4)
         self.song1.setObjectName(u"song1")
         self.song1.setFont(font2)
-        self.song1.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song1.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song1.setWordWrap(False)
 
@@ -279,18 +279,18 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_4)
         self.num_5 = QLabel(self.centralwidget)
         self.num_5.setObjectName(u"num_5")
-        self.num_5.setGeometry(QRect(357, 170, 40, 51))
+        self.num_5.setGeometry(QRect(347, 170, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_5.sizePolicy().hasHeightForWidth())
         self.num_5.setSizePolicy(sizePolicy1)
         self.num_5.setFont(font2)
-        self.num_5.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_5.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_26 = QScrollArea(self.centralwidget)
         self.scrollArea_26.setObjectName(u"scrollArea_26")
-        self.scrollArea_26.setGeometry(QRect(397, 170, 250, 66))
+        self.scrollArea_26.setGeometry(QRect(387, 170, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_26.sizePolicy().hasHeightForWidth())
         self.scrollArea_26.setSizePolicy(sizePolicy)
-        self.scrollArea_26.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_26.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_26.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_26.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -305,7 +305,7 @@ class Ui_MainWindow(object):
         self.song8 = QLabel(self.scrollAreaWidgetContents_43)
         self.song8.setObjectName(u"song8")
         self.song8.setFont(font2)
-        self.song8.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song8.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_42.addWidget(self.song8)
@@ -313,18 +313,18 @@ class Ui_MainWindow(object):
         self.scrollArea_26.setWidget(self.scrollAreaWidgetContents_43)
         self.num_6 = QLabel(self.centralwidget)
         self.num_6.setObjectName(u"num_6")
-        self.num_6.setGeometry(QRect(20, 170, 40, 51))
+        self.num_6.setGeometry(QRect(10, 170, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_6.sizePolicy().hasHeightForWidth())
         self.num_6.setSizePolicy(sizePolicy1)
         self.num_6.setFont(font2)
-        self.num_6.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_6.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_3 = QScrollArea(self.centralwidget)
         self.scrollArea_3.setObjectName(u"scrollArea_3")
-        self.scrollArea_3.setGeometry(QRect(60, 170, 263, 66))
+        self.scrollArea_3.setGeometry(QRect(50, 170, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_3.sizePolicy().hasHeightForWidth())
         self.scrollArea_3.setSizePolicy(sizePolicy)
-        self.scrollArea_3.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_3.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_3.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_3.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -339,7 +339,7 @@ class Ui_MainWindow(object):
         self.song2 = QLabel(self.scrollAreaWidgetContents_5)
         self.song2.setObjectName(u"song2")
         self.song2.setFont(font2)
-        self.song2.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song2.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song2.setWordWrap(False)
 
@@ -348,18 +348,18 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_5)
         self.num_7 = QLabel(self.centralwidget)
         self.num_7.setObjectName(u"num_7")
-        self.num_7.setGeometry(QRect(357, 255, 40, 51))
+        self.num_7.setGeometry(QRect(347, 255, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_7.sizePolicy().hasHeightForWidth())
         self.num_7.setSizePolicy(sizePolicy1)
         self.num_7.setFont(font2)
-        self.num_7.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_7.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_27 = QScrollArea(self.centralwidget)
         self.scrollArea_27.setObjectName(u"scrollArea_27")
-        self.scrollArea_27.setGeometry(QRect(397, 255, 250, 66))
+        self.scrollArea_27.setGeometry(QRect(387, 255, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_27.sizePolicy().hasHeightForWidth())
         self.scrollArea_27.setSizePolicy(sizePolicy)
-        self.scrollArea_27.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_27.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_27.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_27.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -374,7 +374,7 @@ class Ui_MainWindow(object):
         self.song9 = QLabel(self.scrollAreaWidgetContents_44)
         self.song9.setObjectName(u"song9")
         self.song9.setFont(font2)
-        self.song9.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song9.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_43.addWidget(self.song9)
@@ -382,18 +382,18 @@ class Ui_MainWindow(object):
         self.scrollArea_27.setWidget(self.scrollAreaWidgetContents_44)
         self.num_8 = QLabel(self.centralwidget)
         self.num_8.setObjectName(u"num_8")
-        self.num_8.setGeometry(QRect(20, 255, 40, 51))
+        self.num_8.setGeometry(QRect(10, 255, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_8.sizePolicy().hasHeightForWidth())
         self.num_8.setSizePolicy(sizePolicy1)
         self.num_8.setFont(font2)
-        self.num_8.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_8.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_4 = QScrollArea(self.centralwidget)
         self.scrollArea_4.setObjectName(u"scrollArea_4")
-        self.scrollArea_4.setGeometry(QRect(60, 255, 263, 66))
+        self.scrollArea_4.setGeometry(QRect(50, 255, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_4.sizePolicy().hasHeightForWidth())
         self.scrollArea_4.setSizePolicy(sizePolicy)
-        self.scrollArea_4.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_4.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_4.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_4.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -408,7 +408,7 @@ class Ui_MainWindow(object):
         self.song3 = QLabel(self.scrollAreaWidgetContents_6)
         self.song3.setObjectName(u"song3")
         self.song3.setFont(font2)
-        self.song3.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song3.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song3.setWordWrap(False)
 
@@ -417,18 +417,18 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_6)
         self.num_9 = QLabel(self.centralwidget)
         self.num_9.setObjectName(u"num_9")
-        self.num_9.setGeometry(QRect(357, 340, 40, 51))
+        self.num_9.setGeometry(QRect(347, 340, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_9.sizePolicy().hasHeightForWidth())
         self.num_9.setSizePolicy(sizePolicy1)
         self.num_9.setFont(font2)
-        self.num_9.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_9.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_28 = QScrollArea(self.centralwidget)
         self.scrollArea_28.setObjectName(u"scrollArea_28")
-        self.scrollArea_28.setGeometry(QRect(397, 340, 250, 66))
+        self.scrollArea_28.setGeometry(QRect(387, 340, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_28.sizePolicy().hasHeightForWidth())
         self.scrollArea_28.setSizePolicy(sizePolicy)
-        self.scrollArea_28.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_28.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_28.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_28.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -443,7 +443,7 @@ class Ui_MainWindow(object):
         self.song10 = QLabel(self.scrollAreaWidgetContents_45)
         self.song10.setObjectName(u"song10")
         self.song10.setFont(font2)
-        self.song10.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song10.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_44.addWidget(self.song10)
@@ -451,18 +451,18 @@ class Ui_MainWindow(object):
         self.scrollArea_28.setWidget(self.scrollAreaWidgetContents_45)
         self.num_10 = QLabel(self.centralwidget)
         self.num_10.setObjectName(u"num_10")
-        self.num_10.setGeometry(QRect(20, 340, 40, 51))
+        self.num_10.setGeometry(QRect(10, 340, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_10.sizePolicy().hasHeightForWidth())
         self.num_10.setSizePolicy(sizePolicy1)
         self.num_10.setFont(font2)
-        self.num_10.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_10.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_5 = QScrollArea(self.centralwidget)
         self.scrollArea_5.setObjectName(u"scrollArea_5")
-        self.scrollArea_5.setGeometry(QRect(60, 340, 263, 66))
+        self.scrollArea_5.setGeometry(QRect(50, 340, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_5.sizePolicy().hasHeightForWidth())
         self.scrollArea_5.setSizePolicy(sizePolicy)
-        self.scrollArea_5.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_5.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_5.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_5.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -477,7 +477,7 @@ class Ui_MainWindow(object):
         self.song4 = QLabel(self.scrollAreaWidgetContents_7)
         self.song4.setObjectName(u"song4")
         self.song4.setFont(font2)
-        self.song4.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song4.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song4.setWordWrap(False)
 
@@ -486,10 +486,10 @@ class Ui_MainWindow(object):
         self.scrollArea_5.setWidget(self.scrollAreaWidgetContents_7)
         self.scrollArea_29 = QScrollArea(self.centralwidget)
         self.scrollArea_29.setObjectName(u"scrollArea_29")
-        self.scrollArea_29.setGeometry(QRect(400, 425, 250, 66))
+        self.scrollArea_29.setGeometry(QRect(390, 425, 250, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_29.sizePolicy().hasHeightForWidth())
         self.scrollArea_29.setSizePolicy(sizePolicy)
-        self.scrollArea_29.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_29.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_29.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_29.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -504,7 +504,7 @@ class Ui_MainWindow(object):
         self.song11 = QLabel(self.scrollAreaWidgetContents_41)
         self.song11.setObjectName(u"song11")
         self.song11.setFont(font2)
-        self.song11.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song11.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
 
         self.horizontalLayout_40.addWidget(self.song11)
@@ -512,18 +512,18 @@ class Ui_MainWindow(object):
         self.scrollArea_29.setWidget(self.scrollAreaWidgetContents_41)
         self.num_11 = QLabel(self.centralwidget)
         self.num_11.setObjectName(u"num_11")
-        self.num_11.setGeometry(QRect(20, 425, 40, 51))
+        self.num_11.setGeometry(QRect(10, 425, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_11.sizePolicy().hasHeightForWidth())
         self.num_11.setSizePolicy(sizePolicy1)
         self.num_11.setFont(font2)
-        self.num_11.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_11.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_6 = QScrollArea(self.centralwidget)
         self.scrollArea_6.setObjectName(u"scrollArea_6")
-        self.scrollArea_6.setGeometry(QRect(60, 425, 263, 66))
+        self.scrollArea_6.setGeometry(QRect(50, 425, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_6.sizePolicy().hasHeightForWidth())
         self.scrollArea_6.setSizePolicy(sizePolicy)
-        self.scrollArea_6.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.scrollArea_6.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.scrollArea_6.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.scrollArea_6.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
@@ -538,7 +538,7 @@ class Ui_MainWindow(object):
         self.song5 = QLabel(self.scrollAreaWidgetContents_3)
         self.song5.setObjectName(u"song5")
         self.song5.setFont(font2)
-        self.song5.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.song5.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.song5.setWordWrap(False)
 
@@ -547,15 +547,15 @@ class Ui_MainWindow(object):
         self.scrollArea_6.setWidget(self.scrollAreaWidgetContents_3)
         self.num_12 = QLabel(self.centralwidget)
         self.num_12.setObjectName(u"num_12")
-        self.num_12.setGeometry(QRect(357, 425, 40, 51))
+        self.num_12.setGeometry(QRect(347, 425, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_12.sizePolicy().hasHeightForWidth())
         self.num_12.setSizePolicy(sizePolicy1)
         self.num_12.setFont(font2)
-        self.num_12.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
+        self.num_12.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
 "border: none;")
         self.num_13 = QLabel(self.centralwidget)
         self.num_13.setObjectName(u"num_13")
-        self.num_13.setGeometry(QRect(660, 255, 40, 51))
+        self.num_13.setGeometry(QRect(650, 255, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_13.sizePolicy().hasHeightForWidth())
         self.num_13.setSizePolicy(sizePolicy1)
         self.num_13.setFont(font2)
@@ -563,7 +563,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_14 = QLabel(self.centralwidget)
         self.num_14.setObjectName(u"num_14")
-        self.num_14.setGeometry(QRect(660, 170, 40, 51))
+        self.num_14.setGeometry(QRect(650, 170, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_14.sizePolicy().hasHeightForWidth())
         self.num_14.setSizePolicy(sizePolicy1)
         self.num_14.setFont(font2)
@@ -571,7 +571,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.scrollArea_7 = QScrollArea(self.centralwidget)
         self.scrollArea_7.setObjectName(u"scrollArea_7")
-        self.scrollArea_7.setGeometry(QRect(700, 170, 263, 66))
+        self.scrollArea_7.setGeometry(QRect(690, 170, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_7.sizePolicy().hasHeightForWidth())
         self.scrollArea_7.setSizePolicy(sizePolicy)
         self.scrollArea_7.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -598,7 +598,7 @@ class Ui_MainWindow(object):
         self.scrollArea_7.setWidget(self.scrollAreaWidgetContents_14)
         self.scrollArea_30 = QScrollArea(self.centralwidget)
         self.scrollArea_30.setObjectName(u"scrollArea_30")
-        self.scrollArea_30.setGeometry(QRect(1037, 255, 263, 66))
+        self.scrollArea_30.setGeometry(QRect(1027, 255, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_30.sizePolicy().hasHeightForWidth())
         self.scrollArea_30.setSizePolicy(sizePolicy)
         self.scrollArea_30.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -624,7 +624,7 @@ class Ui_MainWindow(object):
         self.scrollArea_30.setWidget(self.scrollAreaWidgetContents_51)
         self.scrollArea_8 = QScrollArea(self.centralwidget)
         self.scrollArea_8.setObjectName(u"scrollArea_8")
-        self.scrollArea_8.setGeometry(QRect(700, 425, 263, 66))
+        self.scrollArea_8.setGeometry(QRect(690, 425, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_8.sizePolicy().hasHeightForWidth())
         self.scrollArea_8.setSizePolicy(sizePolicy)
         self.scrollArea_8.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -651,7 +651,7 @@ class Ui_MainWindow(object):
         self.scrollArea_8.setWidget(self.scrollAreaWidgetContents_15)
         self.scrollArea_13 = QScrollArea(self.centralwidget)
         self.scrollArea_13.setObjectName(u"scrollArea_13")
-        self.scrollArea_13.setGeometry(QRect(1037, 0, 263, 66))
+        self.scrollArea_13.setGeometry(QRect(1027, 0, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_13.sizePolicy().hasHeightForWidth())
         self.scrollArea_13.setSizePolicy(sizePolicy)
         self.scrollArea_13.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -677,7 +677,7 @@ class Ui_MainWindow(object):
         self.scrollArea_13.setWidget(self.scrollAreaWidgetContents_29)
         self.num_15 = QLabel(self.centralwidget)
         self.num_15.setObjectName(u"num_15")
-        self.num_15.setGeometry(QRect(997, 170, 40, 51))
+        self.num_15.setGeometry(QRect(987, 170, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_15.sizePolicy().hasHeightForWidth())
         self.num_15.setSizePolicy(sizePolicy1)
         self.num_15.setFont(font2)
@@ -685,7 +685,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_16 = QLabel(self.centralwidget)
         self.num_16.setObjectName(u"num_16")
-        self.num_16.setGeometry(QRect(997, 425, 40, 51))
+        self.num_16.setGeometry(QRect(987, 425, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_16.sizePolicy().hasHeightForWidth())
         self.num_16.setSizePolicy(sizePolicy1)
         self.num_16.setFont(font2)
@@ -693,7 +693,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.scrollArea_31 = QScrollArea(self.centralwidget)
         self.scrollArea_31.setObjectName(u"scrollArea_31")
-        self.scrollArea_31.setGeometry(QRect(1037, 340, 263, 66))
+        self.scrollArea_31.setGeometry(QRect(1027, 340, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_31.sizePolicy().hasHeightForWidth())
         self.scrollArea_31.setSizePolicy(sizePolicy)
         self.scrollArea_31.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -719,7 +719,7 @@ class Ui_MainWindow(object):
         self.scrollArea_31.setWidget(self.scrollAreaWidgetContents_52)
         self.num_17 = QLabel(self.centralwidget)
         self.num_17.setObjectName(u"num_17")
-        self.num_17.setGeometry(QRect(660, 0, 40, 51))
+        self.num_17.setGeometry(QRect(650, 0, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_17.sizePolicy().hasHeightForWidth())
         self.num_17.setSizePolicy(sizePolicy1)
         self.num_17.setFont(font2)
@@ -727,7 +727,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_18 = QLabel(self.centralwidget)
         self.num_18.setObjectName(u"num_18")
-        self.num_18.setGeometry(QRect(660, 425, 40, 51))
+        self.num_18.setGeometry(QRect(650, 425, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_18.sizePolicy().hasHeightForWidth())
         self.num_18.setSizePolicy(sizePolicy1)
         self.num_18.setFont(font2)
@@ -735,7 +735,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_19 = QLabel(self.centralwidget)
         self.num_19.setObjectName(u"num_19")
-        self.num_19.setGeometry(QRect(997, 340, 40, 51))
+        self.num_19.setGeometry(QRect(987, 340, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_19.sizePolicy().hasHeightForWidth())
         self.num_19.setSizePolicy(sizePolicy1)
         self.num_19.setFont(font2)
@@ -743,7 +743,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_20 = QLabel(self.centralwidget)
         self.num_20.setObjectName(u"num_20")
-        self.num_20.setGeometry(QRect(660, 340, 40, 51))
+        self.num_20.setGeometry(QRect(650, 340, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_20.sizePolicy().hasHeightForWidth())
         self.num_20.setSizePolicy(sizePolicy1)
         self.num_20.setFont(font2)
@@ -751,7 +751,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_21 = QLabel(self.centralwidget)
         self.num_21.setObjectName(u"num_21")
-        self.num_21.setGeometry(QRect(660, 85, 40, 51))
+        self.num_21.setGeometry(QRect(650, 85, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_21.sizePolicy().hasHeightForWidth())
         self.num_21.setSizePolicy(sizePolicy1)
         self.num_21.setFont(font2)
@@ -759,7 +759,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.scrollArea_32 = QScrollArea(self.centralwidget)
         self.scrollArea_32.setObjectName(u"scrollArea_32")
-        self.scrollArea_32.setGeometry(QRect(1037, 425, 263, 66))
+        self.scrollArea_32.setGeometry(QRect(1027, 425, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_32.sizePolicy().hasHeightForWidth())
         self.scrollArea_32.setSizePolicy(sizePolicy)
         self.scrollArea_32.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -785,7 +785,7 @@ class Ui_MainWindow(object):
         self.scrollArea_32.setWidget(self.scrollAreaWidgetContents_53)
         self.scrollArea_33 = QScrollArea(self.centralwidget)
         self.scrollArea_33.setObjectName(u"scrollArea_33")
-        self.scrollArea_33.setGeometry(QRect(1037, 85, 263, 66))
+        self.scrollArea_33.setGeometry(QRect(1027, 85, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_33.sizePolicy().hasHeightForWidth())
         self.scrollArea_33.setSizePolicy(sizePolicy)
         self.scrollArea_33.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -811,7 +811,7 @@ class Ui_MainWindow(object):
         self.scrollArea_33.setWidget(self.scrollAreaWidgetContents_54)
         self.num_22 = QLabel(self.centralwidget)
         self.num_22.setObjectName(u"num_22")
-        self.num_22.setGeometry(QRect(997, 255, 40, 51))
+        self.num_22.setGeometry(QRect(987, 255, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_22.sizePolicy().hasHeightForWidth())
         self.num_22.setSizePolicy(sizePolicy1)
         self.num_22.setFont(font2)
@@ -819,7 +819,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.scrollArea_9 = QScrollArea(self.centralwidget)
         self.scrollArea_9.setObjectName(u"scrollArea_9")
-        self.scrollArea_9.setGeometry(QRect(700, 0, 263, 66))
+        self.scrollArea_9.setGeometry(QRect(690, 0, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_9.sizePolicy().hasHeightForWidth())
         self.scrollArea_9.setSizePolicy(sizePolicy)
         self.scrollArea_9.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -846,7 +846,7 @@ class Ui_MainWindow(object):
         self.scrollArea_9.setWidget(self.scrollAreaWidgetContents_16)
         self.scrollArea_10 = QScrollArea(self.centralwidget)
         self.scrollArea_10.setObjectName(u"scrollArea_10")
-        self.scrollArea_10.setGeometry(QRect(700, 255, 263, 66))
+        self.scrollArea_10.setGeometry(QRect(690, 255, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_10.sizePolicy().hasHeightForWidth())
         self.scrollArea_10.setSizePolicy(sizePolicy)
         self.scrollArea_10.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -873,7 +873,7 @@ class Ui_MainWindow(object):
         self.scrollArea_10.setWidget(self.scrollAreaWidgetContents_17)
         self.scrollArea_11 = QScrollArea(self.centralwidget)
         self.scrollArea_11.setObjectName(u"scrollArea_11")
-        self.scrollArea_11.setGeometry(QRect(700, 340, 263, 66))
+        self.scrollArea_11.setGeometry(QRect(690, 340, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_11.sizePolicy().hasHeightForWidth())
         self.scrollArea_11.setSizePolicy(sizePolicy)
         self.scrollArea_11.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -900,7 +900,7 @@ class Ui_MainWindow(object):
         self.scrollArea_11.setWidget(self.scrollAreaWidgetContents_18)
         self.num_23 = QLabel(self.centralwidget)
         self.num_23.setObjectName(u"num_23")
-        self.num_23.setGeometry(QRect(997, 0, 40, 51))
+        self.num_23.setGeometry(QRect(987, 0, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_23.sizePolicy().hasHeightForWidth())
         self.num_23.setSizePolicy(sizePolicy1)
         self.num_23.setFont(font2)
@@ -908,7 +908,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.num_24 = QLabel(self.centralwidget)
         self.num_24.setObjectName(u"num_24")
-        self.num_24.setGeometry(QRect(997, 85, 40, 51))
+        self.num_24.setGeometry(QRect(987, 85, 40, 51))
         sizePolicy1.setHeightForWidth(self.num_24.sizePolicy().hasHeightForWidth())
         self.num_24.setSizePolicy(sizePolicy1)
         self.num_24.setFont(font2)
@@ -916,7 +916,7 @@ class Ui_MainWindow(object):
 "border: none;")
         self.scrollArea_34 = QScrollArea(self.centralwidget)
         self.scrollArea_34.setObjectName(u"scrollArea_34")
-        self.scrollArea_34.setGeometry(QRect(1037, 170, 263, 66))
+        self.scrollArea_34.setGeometry(QRect(1027, 170, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_34.sizePolicy().hasHeightForWidth())
         self.scrollArea_34.setSizePolicy(sizePolicy)
         self.scrollArea_34.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -942,7 +942,7 @@ class Ui_MainWindow(object):
         self.scrollArea_34.setWidget(self.scrollAreaWidgetContents_55)
         self.scrollArea_14 = QScrollArea(self.centralwidget)
         self.scrollArea_14.setObjectName(u"scrollArea_14")
-        self.scrollArea_14.setGeometry(QRect(700, 85, 263, 66))
+        self.scrollArea_14.setGeometry(QRect(690, 85, 263, 66))
         sizePolicy.setHeightForWidth(self.scrollArea_14.sizePolicy().hasHeightForWidth())
         self.scrollArea_14.setSizePolicy(sizePolicy)
         self.scrollArea_14.setStyleSheet(u"background-color: rgb(255, 180, 0);\n"
@@ -967,7 +967,62 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.song13)
 
         self.scrollArea_14.setWidget(self.scrollAreaWidgetContents_19)
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(-110, -30, 751, 551))
+        self.label.setStyleSheet(u"background-color: rgb(255, 150, 0);\n"
+"border: none;")
         MainWindow.setCentralWidget(self.centralwidget)
+        self.label.raise_()
+        self.buttons.raise_()
+        self.scrollArea.raise_()
+        self.scrollArea_12.raise_()
+        self.num.raise_()
+        self.num_3.raise_()
+        self.num_2.raise_()
+        self.scrollArea_25.raise_()
+        self.num_4.raise_()
+        self.scrollArea_2.raise_()
+        self.num_5.raise_()
+        self.scrollArea_26.raise_()
+        self.num_6.raise_()
+        self.scrollArea_3.raise_()
+        self.num_7.raise_()
+        self.scrollArea_27.raise_()
+        self.num_8.raise_()
+        self.scrollArea_4.raise_()
+        self.num_9.raise_()
+        self.scrollArea_28.raise_()
+        self.num_10.raise_()
+        self.scrollArea_5.raise_()
+        self.scrollArea_29.raise_()
+        self.num_11.raise_()
+        self.scrollArea_6.raise_()
+        self.num_12.raise_()
+        self.num_13.raise_()
+        self.num_14.raise_()
+        self.scrollArea_7.raise_()
+        self.scrollArea_30.raise_()
+        self.scrollArea_8.raise_()
+        self.scrollArea_13.raise_()
+        self.num_15.raise_()
+        self.num_16.raise_()
+        self.scrollArea_31.raise_()
+        self.num_17.raise_()
+        self.num_18.raise_()
+        self.num_19.raise_()
+        self.num_20.raise_()
+        self.num_21.raise_()
+        self.scrollArea_32.raise_()
+        self.scrollArea_33.raise_()
+        self.num_22.raise_()
+        self.scrollArea_9.raise_()
+        self.scrollArea_10.raise_()
+        self.scrollArea_11.raise_()
+        self.num_23.raise_()
+        self.num_24.raise_()
+        self.scrollArea_34.raise_()
+        self.scrollArea_14.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -1036,5 +1091,6 @@ class Ui_MainWindow(object):
         self.num_24.setText(QCoreApplication.translate("MainWindow", u"20:", None))
         self.song20.setText(QCoreApplication.translate("MainWindow", u"Song Name", None))
         self.song13.setText(QCoreApplication.translate("MainWindow", u"SONG NAME", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
     # retranslateUi
 

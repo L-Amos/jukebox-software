@@ -25,7 +25,7 @@
    <widget class="QFrame" name="buttons">
     <property name="geometry">
      <rect>
-      <x>590</x>
+      <x>580</x>
       <y>110</y>
       <width>0</width>
       <height>0</height>
@@ -62,7 +62,7 @@ border: none;</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -93,7 +93,7 @@ border: none;</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -121,7 +121,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -146,7 +146,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -171,7 +171,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -196,7 +196,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -221,7 +221,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -246,7 +246,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -271,7 +271,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -296,7 +296,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -324,7 +324,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -349,7 +349,7 @@ border: none;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 180, 0);
+      <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
      </property>
      <property name="text">
@@ -360,7 +360,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>0</y>
       <width>263</width>
       <height>66</height>
@@ -373,7 +373,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -419,7 +419,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -436,7 +436,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_12">
     <property name="geometry">
      <rect>
-      <x>397</x>
+      <x>387</x>
       <y>0</y>
       <width>250</width>
       <height>66</height>
@@ -449,7 +449,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -495,7 +495,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -509,7 +509,7 @@ border: none;</string>
    <widget class="QLabel" name="num">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>0</y>
       <width>40</width>
       <height>51</height>
@@ -528,7 +528,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -538,7 +538,7 @@ border: none;</string>
    <widget class="QLabel" name="num_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>0</y>
       <width>40</width>
       <height>51</height>
@@ -557,7 +557,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -567,7 +567,7 @@ border: none;</string>
    <widget class="QLabel" name="num_2">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>85</y>
       <width>40</width>
       <height>51</height>
@@ -586,7 +586,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -596,7 +596,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_25">
     <property name="geometry">
      <rect>
-      <x>397</x>
+      <x>387</x>
       <y>85</y>
       <width>250</width>
       <height>66</height>
@@ -609,7 +609,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -655,7 +655,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -669,7 +669,7 @@ border: none;</string>
    <widget class="QLabel" name="num_4">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>85</y>
       <width>40</width>
       <height>51</height>
@@ -688,7 +688,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -698,7 +698,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>85</y>
       <width>263</width>
       <height>66</height>
@@ -711,7 +711,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -757,7 +757,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -774,7 +774,7 @@ border: none;</string>
    <widget class="QLabel" name="num_5">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>170</y>
       <width>40</width>
       <height>51</height>
@@ -793,7 +793,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -803,7 +803,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_26">
     <property name="geometry">
      <rect>
-      <x>397</x>
+      <x>387</x>
       <y>170</y>
       <width>250</width>
       <height>66</height>
@@ -816,7 +816,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -862,7 +862,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -876,7 +876,7 @@ border: none;</string>
    <widget class="QLabel" name="num_6">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>170</y>
       <width>40</width>
       <height>51</height>
@@ -895,7 +895,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -905,7 +905,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_3">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>170</y>
       <width>263</width>
       <height>66</height>
@@ -918,7 +918,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -964,7 +964,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -981,7 +981,7 @@ border: none;</string>
    <widget class="QLabel" name="num_7">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>255</y>
       <width>40</width>
       <height>51</height>
@@ -1000,7 +1000,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1010,7 +1010,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_27">
     <property name="geometry">
      <rect>
-      <x>397</x>
+      <x>387</x>
       <y>255</y>
       <width>250</width>
       <height>66</height>
@@ -1023,7 +1023,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1069,7 +1069,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1083,7 +1083,7 @@ border: none;</string>
    <widget class="QLabel" name="num_8">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>255</y>
       <width>40</width>
       <height>51</height>
@@ -1102,7 +1102,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1112,7 +1112,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_4">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>255</y>
       <width>263</width>
       <height>66</height>
@@ -1125,7 +1125,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1171,7 +1171,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1188,7 +1188,7 @@ border: none;</string>
    <widget class="QLabel" name="num_9">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>340</y>
       <width>40</width>
       <height>51</height>
@@ -1207,7 +1207,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1217,7 +1217,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_28">
     <property name="geometry">
      <rect>
-      <x>397</x>
+      <x>387</x>
       <y>340</y>
       <width>250</width>
       <height>66</height>
@@ -1230,7 +1230,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1276,7 +1276,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1290,7 +1290,7 @@ border: none;</string>
    <widget class="QLabel" name="num_10">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>340</y>
       <width>40</width>
       <height>51</height>
@@ -1309,7 +1309,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1319,7 +1319,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_5">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>340</y>
       <width>263</width>
       <height>66</height>
@@ -1332,7 +1332,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1378,7 +1378,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1395,7 +1395,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_29">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>390</x>
       <y>425</y>
       <width>250</width>
       <height>66</height>
@@ -1408,7 +1408,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1454,7 +1454,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1468,7 +1468,7 @@ border: none;</string>
    <widget class="QLabel" name="num_11">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>425</y>
       <width>40</width>
       <height>51</height>
@@ -1487,7 +1487,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1497,7 +1497,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_6">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>50</x>
       <y>425</y>
       <width>263</width>
       <height>66</height>
@@ -1510,7 +1510,7 @@ border: none;</string>
      </sizepolicy>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="verticalScrollBarPolicy">
@@ -1556,7 +1556,7 @@ border: none;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 180, 0);
+         <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
         </property>
         <property name="text">
@@ -1573,7 +1573,7 @@ border: none;</string>
    <widget class="QLabel" name="num_12">
     <property name="geometry">
      <rect>
-      <x>357</x>
+      <x>347</x>
       <y>425</y>
       <width>40</width>
       <height>51</height>
@@ -1592,7 +1592,7 @@ border: none;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 180, 0);
+     <string notr="true">background-color: rgb(255, 150, 0);
 border: none;</string>
     </property>
     <property name="text">
@@ -1602,7 +1602,7 @@ border: none;</string>
    <widget class="QLabel" name="num_13">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>255</y>
       <width>40</width>
       <height>51</height>
@@ -1631,7 +1631,7 @@ border: none;</string>
    <widget class="QLabel" name="num_14">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>170</y>
       <width>40</width>
       <height>51</height>
@@ -1660,7 +1660,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_7">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>170</y>
       <width>263</width>
       <height>66</height>
@@ -1736,7 +1736,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_30">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>255</y>
       <width>263</width>
       <height>66</height>
@@ -1809,7 +1809,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_8">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>425</y>
       <width>263</width>
       <height>66</height>
@@ -1885,7 +1885,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_13">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>0</y>
       <width>263</width>
       <height>66</height>
@@ -1958,7 +1958,7 @@ border: none;</string>
    <widget class="QLabel" name="num_15">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>170</y>
       <width>40</width>
       <height>51</height>
@@ -1987,7 +1987,7 @@ border: none;</string>
    <widget class="QLabel" name="num_16">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>425</y>
       <width>40</width>
       <height>51</height>
@@ -2016,7 +2016,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_31">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>340</y>
       <width>263</width>
       <height>66</height>
@@ -2089,7 +2089,7 @@ border: none;</string>
    <widget class="QLabel" name="num_17">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>0</y>
       <width>40</width>
       <height>51</height>
@@ -2118,7 +2118,7 @@ border: none;</string>
    <widget class="QLabel" name="num_18">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>425</y>
       <width>40</width>
       <height>51</height>
@@ -2147,7 +2147,7 @@ border: none;</string>
    <widget class="QLabel" name="num_19">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>340</y>
       <width>40</width>
       <height>51</height>
@@ -2176,7 +2176,7 @@ border: none;</string>
    <widget class="QLabel" name="num_20">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>340</y>
       <width>40</width>
       <height>51</height>
@@ -2205,7 +2205,7 @@ border: none;</string>
    <widget class="QLabel" name="num_21">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>650</x>
       <y>85</y>
       <width>40</width>
       <height>51</height>
@@ -2234,7 +2234,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_32">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>425</y>
       <width>263</width>
       <height>66</height>
@@ -2307,7 +2307,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_33">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>85</y>
       <width>263</width>
       <height>66</height>
@@ -2380,7 +2380,7 @@ border: none;</string>
    <widget class="QLabel" name="num_22">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>255</y>
       <width>40</width>
       <height>51</height>
@@ -2409,7 +2409,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_9">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>0</y>
       <width>263</width>
       <height>66</height>
@@ -2485,7 +2485,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_10">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>255</y>
       <width>263</width>
       <height>66</height>
@@ -2561,7 +2561,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_11">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>340</y>
       <width>263</width>
       <height>66</height>
@@ -2637,7 +2637,7 @@ border: none;</string>
    <widget class="QLabel" name="num_23">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>0</y>
       <width>40</width>
       <height>51</height>
@@ -2666,7 +2666,7 @@ border: none;</string>
    <widget class="QLabel" name="num_24">
     <property name="geometry">
      <rect>
-      <x>997</x>
+      <x>987</x>
       <y>85</y>
       <width>40</width>
       <height>51</height>
@@ -2695,7 +2695,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_34">
     <property name="geometry">
      <rect>
-      <x>1037</x>
+      <x>1027</x>
       <y>170</y>
       <width>263</width>
       <height>66</height>
@@ -2768,7 +2768,7 @@ border: none;</string>
    <widget class="QScrollArea" name="scrollArea_14">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>85</y>
       <width>263</width>
       <height>66</height>
@@ -2841,6 +2841,73 @@ border: none;</string>
      </layout>
     </widget>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-110</x>
+      <y>-30</y>
+      <width>751</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 150, 0);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>buttons</zorder>
+   <zorder>scrollArea</zorder>
+   <zorder>scrollArea_12</zorder>
+   <zorder>num</zorder>
+   <zorder>num_3</zorder>
+   <zorder>num_2</zorder>
+   <zorder>scrollArea_25</zorder>
+   <zorder>num_4</zorder>
+   <zorder>scrollArea_2</zorder>
+   <zorder>num_5</zorder>
+   <zorder>scrollArea_26</zorder>
+   <zorder>num_6</zorder>
+   <zorder>scrollArea_3</zorder>
+   <zorder>num_7</zorder>
+   <zorder>scrollArea_27</zorder>
+   <zorder>num_8</zorder>
+   <zorder>scrollArea_4</zorder>
+   <zorder>num_9</zorder>
+   <zorder>scrollArea_28</zorder>
+   <zorder>num_10</zorder>
+   <zorder>scrollArea_5</zorder>
+   <zorder>scrollArea_29</zorder>
+   <zorder>num_11</zorder>
+   <zorder>scrollArea_6</zorder>
+   <zorder>num_12</zorder>
+   <zorder>num_13</zorder>
+   <zorder>num_14</zorder>
+   <zorder>scrollArea_7</zorder>
+   <zorder>scrollArea_30</zorder>
+   <zorder>scrollArea_8</zorder>
+   <zorder>scrollArea_13</zorder>
+   <zorder>num_15</zorder>
+   <zorder>num_16</zorder>
+   <zorder>scrollArea_31</zorder>
+   <zorder>num_17</zorder>
+   <zorder>num_18</zorder>
+   <zorder>num_19</zorder>
+   <zorder>num_20</zorder>
+   <zorder>num_21</zorder>
+   <zorder>scrollArea_32</zorder>
+   <zorder>scrollArea_33</zorder>
+   <zorder>num_22</zorder>
+   <zorder>scrollArea_9</zorder>
+   <zorder>scrollArea_10</zorder>
+   <zorder>scrollArea_11</zorder>
+   <zorder>num_23</zorder>
+   <zorder>num_24</zorder>
+   <zorder>scrollArea_34</zorder>
+   <zorder>scrollArea_14</zorder>
   </widget>
  </widget>
  <resources/>
