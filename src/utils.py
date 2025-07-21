@@ -125,6 +125,9 @@ with open("../config.yaml", encoding="utf-8") as config_file:
         raise KeyError("config file does not have a client id.")
     elif not config["client_secret"]:
         raise KeyError("config file does not have a client secret.")
-DEVICE_ID = config["device_id"]
+device_name = config["device_name"]
+devs = request("GET", "https://api.spotify.com/v1/me/player/devices")["devices"]
+chosen_device = [dev for dev in devs if dev["name"]==device_name][0]
+DEVICE_ID = chosen_device["id"]
 SONGS_PER_PAGE = config["songs_per_page"]
 PLAYLIST_ID = config["playlist_id"]
