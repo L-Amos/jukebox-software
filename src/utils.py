@@ -117,6 +117,12 @@ def get_api_credentials(filepath : str):
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(cache_handler=CacheFileHandler(cache_path=filepath), client_id=config["client_id"], client_secret=config["client_secret"], redirect_uri="http://127.0.0.1:4321", scope=scope))
     sp.current_user_playlists()  # Needed to actually obtain the api credentials
 
+def refresh_device_id():
+    global device_name
+    devs = request("GET", "https://api.spotify.com/v1/me/player/devices")["devices"]
+    chosen_device = [dev for dev in devs if dev["name"]==device_name][0]
+    return chosen_device["id"]
+
 # Reading config vars
 with open("../config.yaml", encoding="utf-8") as config_file:
     config = yaml.safe_load(config_file)
@@ -125,9 +131,8 @@ with open("../config.yaml", encoding="utf-8") as config_file:
         raise KeyError("config file does not have a client id.")
     elif not config["client_secret"]:
         raise KeyError("config file does not have a client secret.")
+
 device_name = config["device_name"]
-devs = request("GET", "https://api.spotify.com/v1/me/player/devices")["devices"]
-chosen_device = [dev for dev in devs if dev["name"]==device_name][0]
-DEVICE_ID = chosen_device["id"]
+DEVICE_ID = refresh_device_id()
 SONGS_PER_PAGE = config["songs_per_page"]
 PLAYLIST_ID = config["playlist_id"]
