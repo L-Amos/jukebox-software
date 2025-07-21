@@ -175,7 +175,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.timers = []
     
     def gpio_press(self, button, _,_2):
-        # print(button, BUTTONS[button])
         pressed = BUTTONS[button]
         pressed_button = next(button for button in self.button_list if str(pressed) in button.objectName())
         pressed_button.click()
