@@ -118,7 +118,6 @@ def get_api_credentials(filepath : str):
     sp.current_user_playlists()  # Needed to actually obtain the api credentials
 
 def refresh_device_id():
-    global device_name
     devs = request("GET", "https://api.spotify.com/v1/me/player/devices")["devices"]
     chosen_device = [dev for dev in devs if dev["name"]==device_name][0]
     return chosen_device["id"]

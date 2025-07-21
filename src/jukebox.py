@@ -12,6 +12,8 @@ if __name__=="__main__":
 else:
     from src.utils import request, SONGS_PER_PAGE, PLAYLIST_ID, refresh_device_id
 
+device_id = refresh_device_id()
+
 class Song:
     """General song class.
     """
@@ -19,24 +21,23 @@ class Song:
         self.title = title
         self.artist = artist
         self.uri = uri
-        self.device_id = refresh_device_id()
 
     def play(self):
+        global device_id
         """Plays the song on a given device.
         """
         headers = {"Content-Type": "application/json"}
         data = f'{{"uris": ["{self.uri}"],"position_ms": 0}}'
-        url=f"https://api.spotify.com/v1/me/player/play?device_id={self.device_id}"
+        url=f"https://api.spotify.com/v1/me/player/play?device_id={device_id}"
         try:
             request("PUT", url, headers=headers, data=data)
         except ConnectionAbortedError as e:
             new_id = refresh_device_id()
-            if self.device_id==new_id:
+            if device_id==new_id:
                 print(str(e))
             else:
-                self.device_id = new_id
+                device_id = new_id
                 self.play()
-
 
 class Page:
     """Class for a page of songs.
