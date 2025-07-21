@@ -409,8 +409,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>143</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -483,8 +483,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -554,8 +554,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -625,8 +625,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -696,8 +696,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -767,8 +767,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -838,8 +838,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_21">
@@ -887,7 +887,7 @@ border-radius: 15px;</string>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -909,8 +909,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_22">
@@ -980,8 +980,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -1051,8 +1051,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_24">
@@ -1122,8 +1122,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_25">
@@ -1171,7 +1171,7 @@ border-radius: 15px;</string>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -1193,8 +1193,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -1528,8 +1528,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_27">
@@ -1643,8 +1643,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_28">
@@ -1736,8 +1736,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_29">
@@ -1807,8 +1807,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_30">
@@ -1900,8 +1900,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_31">
@@ -2037,8 +2037,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_32">
@@ -2130,8 +2130,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_33">
@@ -2201,8 +2201,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_34">
@@ -2338,8 +2338,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_35">
@@ -2431,8 +2431,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_36">
@@ -2503,7 +2503,7 @@ border-radius: 15px;</string>
        <x>0</x>
        <y>0</y>
        <width>130</width>
-       <height>29</height>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_37">
@@ -2576,8 +2576,8 @@ border-radius: 15px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>29</height>
+       <width>132</width>
+       <height>33</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_38">
@@ -2622,7 +2622,7 @@ border-radius: 15px;</string>
      <x>0</x>
      <y>0</y>
      <width>1127</width>
-     <height>33</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>
