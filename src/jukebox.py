@@ -8,9 +8,9 @@ the number of the desired song on the page, the web API is used to play the song
 
 from math import ceil
 if __name__=="__main__":
-    from utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
+    from utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID, refresh_device_id
 else:
-    from src.utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID
+    from src.utils import request, SONGS_PER_PAGE, DEVICE_ID, PLAYLIST_ID, refresh_device_id
 
 class Song:
     """General song class.
@@ -21,6 +21,7 @@ class Song:
         self.uri = uri
 
     def play(self, device_id : str = DEVICE_ID):
+        global DEVICE_ID
         """Plays the song on a given device.
 
         :param device_id: ID of the device to play on, defaults to ID in contents.yaml
@@ -32,8 +33,9 @@ class Song:
         try:
             request("PUT", url, headers=headers, data=data)
         except ConnectionAbortedError as e:
-            print(str(e))
-            pass
+            if "Device not found" in str(e):
+                DEVICE_ID = refresh_device_id()
+                self.play()
 
 
 class Page:
