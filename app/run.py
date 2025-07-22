@@ -58,6 +58,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         """Loads and displays the currently-selected page.
         """
         self.text_reset()
+        self.chosen_num = ""
         song_titles = [song.title for song in self.pages[self.active_page].tracks]
         for i,title in enumerate(song_titles):
             # Change the text of each label to the appropriate song title
