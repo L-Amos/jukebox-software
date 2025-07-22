@@ -32,6 +32,8 @@ class Song:
         try:
             request("PUT", url, headers=headers, data=data)
         except ConnectionAbortedError as e:
+            if str(e) == "{'error': {'status': 404, 'message': 'Not found.'}}":
+                self.play()
             new_id = refresh_device_id()
             if device_id==new_id:
                 print(str(e))
@@ -63,7 +65,11 @@ class Page:
         :type offset: int
         """
         self.tracks = []
-        response = request("GET", f"https://api.spotify.com/v1/playlists/{self.playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={(self.page_num)*SONGS_PER_PAGE}")
+        try:
+            response = request("GET", f"https://api.spotify.com/v1/playlists/{self.playlist_id}/tracks?limit={SONGS_PER_PAGE}&offset={(self.page_num)*SONGS_PER_PAGE}")
+        except ConnectionAbortedError:
+            print(str(e))
+            self.refresh()
         items = response["items"]
         for item in items:
             name = item["track"]["name"]
