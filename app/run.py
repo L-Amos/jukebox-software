@@ -42,10 +42,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.timers = []
         self.playing = False
         self.off = False
-        # Create Pages
-        num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
-        num_pages = ceil(num_songs/SONGS_PER_PAGE)
-        self.pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
+        self.create_pages()
         self.active_page = 0
         self.pages[self.active_page].refresh()
         self.page_load()
@@ -54,6 +51,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for button in self.button_list:
             button.clicked.connect(partial(self.button_click, button))
 
+    def create_pages(self):
+        """Create pages of songs.
+        """
+        num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
+        num_pages = ceil(num_songs/SONGS_PER_PAGE)
+        self.pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
+    
     def page_load(self):
         """Loads and displays the currently-selected page.
         """
@@ -152,12 +156,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.clear_timers()
             if "forward" in button.objectName():
+                if self.active_page == len(self.pages)-1:
+                    self.create_pages()
                 self.active_page += 1
                 if self.active_page >= len(self.pages):
                     self.active_page = 0   
             else:
                 self.active_page -= 1
                 if self.active_page < 0:
+                    self.create_pages()
                     self.active_page = len(self.pages)-1
             self.pages[self.active_page].refresh()
             self.page_load()
