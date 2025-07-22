@@ -56,7 +56,7 @@ def get_new_token(secrets: dict, filepath: str) -> dict:
         json.dump(secrets, f)
     return secrets
 
-def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict = None, data: str = None, timeout: int = 10) -> dict:
+def request(request_type: str, url: str, secrets_file: str = "../src/secrets.json", headers: dict = None, data: str = None, timeout: int = 1) -> dict:
     """Wrapper for the python requests module which automatically incorporates api credentials into the http request. 
     
     Automatically obtains new api key if the current one has expired.
