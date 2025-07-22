@@ -158,6 +158,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if "forward" in button.objectName():
                 if self.active_page == len(self.pages)-1:
                     self.create_pages()
+                    self.page_load()
+                    return
                 self.active_page += 1
                 if self.active_page >= len(self.pages):
                     self.active_page = 0   
@@ -166,6 +168,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 if self.active_page < 0:
                     self.create_pages()
                     self.active_page = len(self.pages)-1
+                    self.page_load()
+                    return
             self.pages[self.active_page].refresh()
             self.page_load()
     
