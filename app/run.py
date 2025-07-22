@@ -4,6 +4,7 @@ Displays a rough interface in a picture of the jukebox frontage. Includes clicka
 song names.
 """
 from math import ceil
+import subprocess
 from functools import partial
 from collections.abc import Callable
 import sys
@@ -40,6 +41,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.song_labels = self.findChildren(QtWidgets.QLabel, QtCore.QRegularExpression("^song"))
         self.timers = []
         self.playing = False
+        self.off = False
         # Create Pages
         num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
         num_pages = ceil(num_songs/SONGS_PER_PAGE)
@@ -129,6 +131,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Paint the pressed button red
         button.setStyleSheet("background-color: rgb(255,0,0);\nborder-radius: 15px;")
         button.repaint()
+        if self.off:
+            subprocess.call(['sh', '../../screen_on.sh'])
+            self.off = False
+            self.button_reset()
+            return
         # Case where numbered button is pressed
         if button.text():
             self.chosen_num += button.text()
@@ -137,6 +144,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 # Reset buttons without doing anything if invalid number inputted
                 if chosen_track==69:
                     self.close()
+                elif chosen_track==99:
+                    self.button_reset()
+                    subprocess.call(['sh', '../../screen_off.sh'])
+                    self.off = True
                 elif chosen_track > len(self.pages[self.active_page].tracks) or chosen_track < 0:
                     self.button_reset()
                 # Pause/play if 00 entered
