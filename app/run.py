@@ -113,14 +113,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         scrollbar.setValue(0)
         self.create_oneshot_timer(3000, partial(self.start_text_scroll, scrollbar))
 
-    def button_reset(self):
-        """Resets the state of the buttons.
-        """
-        for button in self.button_list:
-            button.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 235, 235, 206), stop:0.35 rgba(255, 188, 188, 80), stop:0.4 rgba(255, 162, 162, 80), stop:0.425 rgba(255, 132, 132, 156), stop:0.44 rgba(252, 128, 128, 80), stop:1 rgba(255, 255, 255, 0));\n"
-"border-radius: 15px;")
-        self.chosen_num = ""
-
     # Clicked Buttons
     def button_click(self, button : QtWidgets.QPushButton):
         """Handles button push event on main interface.
@@ -128,13 +120,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         :param button: button that has been pushed
         :type button: QtWidgets.QPushButton
         """
-        # Paint the pressed button red
-        button.setStyleSheet("background-color: rgb(255,0,0);\nborder-radius: 15px;")
-        button.repaint()
         if self.off:
             subprocess.call(['sh', '../../screen_on.sh'])
             self.off = False
-            self.button_reset()
             return
         # Case where numbered button is pressed
         if button.text():
@@ -145,11 +133,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 if chosen_track==69:
                     self.close()
                 elif chosen_track==99:
-                    self.button_reset()
                     subprocess.call(['sh', '../../screen_off.sh'])
                     self.off = True
-                elif chosen_track > len(self.pages[self.active_page].tracks) or chosen_track < 0:
-                    self.button_reset()
                 # Pause/play if 00 entered
                 elif chosen_track==0:
                     if self.playing:
@@ -158,11 +143,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     else:
                         request("PUT", "https://api.spotify.com/v1/me/player/play")
                         self.playing = True
-                    self.button_reset()
                 else:
                     self.pages[self.active_page].tracks[chosen_track-1].play()
                     self.playing = True
-                    self.button_reset()
+                self.chosen_num = ""
         # Case where page forward/backward button is pressed
         else:
             self.clear_timers()
@@ -176,7 +160,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     self.active_page = len(self.pages)-1
             self.pages[self.active_page].refresh()
             self.page_load()
-            self.button_reset()
     
     def clear_timers(self):
         """Stops and destroys all currently-active timers.
