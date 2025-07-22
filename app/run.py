@@ -179,16 +179,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         pressed_button = next(button for button in self.button_list if str(pressed) in button.objectName())
         pressed_button.click()
 
-app = QtWidgets.QApplication(sys.argv)
 
-window = MainWindow()
-# GPIO
+# Set up GPIO
 pi = pigpio.pi()
-# Connect buttons to functions
 for button in BUTTONS:
     pi.set_mode(button, pigpio.INPUT)
     pi.set_pull_up_down(button, pigpio.PUD_UP)
     pi.set_glitch_filter(button, 1000)  # Deals with switch bounce
+
+app = QtWidgets.QApplication(sys.argv)
+
+window = MainWindow()
+# Connect buttons to functions
+for button in BUTTONS:
     pi.callback(button, func=window.gpio_press)
 
 window.show()
