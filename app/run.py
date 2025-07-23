@@ -162,6 +162,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     else:
                         request("PUT", "https://api.spotify.com/v1/me/player/play")
                         self.playing = True
+                elif chosen_track >= len(self.pages[self.active_page].tracks):
+                    pass
                 else:
                     self.pages[self.active_page].tracks[chosen_track-1].play()
                     self.playing = True
