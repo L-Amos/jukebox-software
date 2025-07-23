@@ -156,11 +156,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.clear_timers()
             if "forward" in button.objectName():
-                if self.active_page == len(self.pages)-1:
-                    self.create_pages()
-                    self.page_load()
-                    return
                 self.active_page += 1
+                if self.active_page == len(self.pages):
+                    self.create_pages()
                 if self.active_page >= len(self.pages):
                     self.active_page = 0   
             else:
