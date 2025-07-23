@@ -4,6 +4,7 @@ Displays a rough interface in a picture of the jukebox frontage. Includes clicka
 song names.
 """
 from math import ceil
+from requests.exceptions import ReadTimeout
 import subprocess
 from functools import partial
 from collections.abc import Callable
@@ -56,7 +57,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         """
         try:    
             num_songs = request("GET", f"https://api.spotify.com/v1/playlists/{PLAYLIST_ID}")["tracks"]["total"]
-        except Error:
+        except ReadTimeout:
             create_pages()
         num_pages = ceil(num_songs/SONGS_PER_PAGE)
         self.pages = [Page(PLAYLIST_ID, i) for i in range(num_pages)]
