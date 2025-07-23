@@ -75,8 +75,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             # Set up the label's scrollbar
             scrollbar = label.parentWidget().parentWidget().parentWidget().horizontalScrollBar()
             scrollbar.hide()
-            if len(title) > 11:
-                scrollbar.setMaximum(label.width()-label.parentWidget().parentWidget().parentWidget().width())  # Calculate maximum value (as for some reason it doesn't report it properly)
+            scrollbar_width = label.width()-label.parentWidget().parentWidget().parentWidget().width()
+            if scrollbar_width > 0:
+                scrollbar.setMaximum(scrollbar_width)  # Set maximum value (for some reason it doesn't automatically set it properly)
                 self.stop_text_scroll(scrollbar)
 
     def text_reset(self):
